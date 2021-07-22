@@ -1,0 +1,49 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\author{Frithjof Lutscher}
+\begin{document}
+
+
+3.1 Theoretical results\\
+
+
+From the model equation (Eq.~1), we derive a formula that predicts how the end of the seasonal resting phase of a species changes when the temperature time series changes by a small amount. For a first example, if the temperature difference between two years is simply a small constant ($\Delta x$), i.e., 
+$
+x_2(t) = x_1(t) + \Delta x,
+$
+then the corresponding end times $t_2^*$ and $t_1^*$ are related by
+\[
+t_2^* = t_1^* - \frac{\Delta x}{R(x_1(t_1^*))}\int_{t_0}^{t_1^*} R'(x_1(t))dt.\qquad\qquad ({\rm Eq. \; CONSTANT})
+\] 
+For a second example, if the difference in temperature between two years is a warm spell of short duration $\Delta t$ at time $t_s$ of temperature difference $\Delta x$, then the corresponding ends of the seasonal resting phases are related by
+\[
+t_2^* = t_1^* - {\Delta x \Delta t}\frac{R'(x_1(t_s))}{R(x_1(t_1^*))}. \qquad\qquad ({\rm Eq. \; SPELL})
+\] 
+We give the mathematical derivation of these results in the appendix. 
+
+Both formulas show the expected qualitative pattern than if time series $x_2$ is warmer than $x_1$, i.e., $\Delta x>0$, then the end of the seasonal resting period $t_2^*$ is before the corresponding $t_1^*$ (since all the terms after the `$-$' sign are positive). More importantly, the formulas allow us to quantify the expected shift in the end of the resting period. We observe that the shift depends on the {\em derivative} of the rate accumulation function. In particular, the impact of a short temperature spell is proportional to the derivative, $R'(x(t_s))$ at the time of the spell. Hence, the end time of the seasonal resting period is the most sensitive to warm or cold spells where $R(\cdot)$ has its maximal slope. For the rate function in Eq. 2, this occurs at temperature $x=c$. 
+
+We now apply formula (Eq.~SPELL) to the question of how a mismatch in the end time of the seasonal resting period between a consumer and its resource may be affected by climate change. We concentrate on the scenario where the `novel' temperature time series $x_2(t)$ differs from the `expected' temperature $x_1(t)$ by a short spell of duration $\Delta t$ by temperature difference $\Delta x$. We denote the end times of the consumer for time series $x_i(t)$ by $t_{e,i}^*$ (emergence time) and of the resource by $t_{b,i}^*$ (budburst time). The corresponding rate accumulation functions are $R_e(\cdot)$ and $R_b(\cdot)$. Then the mismatch changes according to
+\[
+\underbrace{t_{e,2}^* - t_{b,2}^*}_{{\rm mismatch\; 2}} = \underbrace{t_{e,1}^* - t_{b,1}^*}_{{\rm mismatch\; 1}}-\Delta x\Delta t\left(\frac{R_e'(x_1(t_s))}{R_e(x_1(t_{e,1}^*))} - \frac{R_b'(x_1(t_s))}{R_b(x_1(t_{b,1}^*))}\right). \qquad ({\rm Eq.~MATCH})
+\]
+To interpret this formula, let us consider the scenario that the consumer emerges ahead of its resource in `normal' circumstances, i.e., mismatch 1 is negative. If a warm spell happens at a temperature where the slope of the rate function of the consumer is high but that of the resource is low, i.e., the rate function of the consumer is more sensitive than that of the resource, then the mismatch will increase. If, on the other hand, a warm spell happens at a temperature where the rate function of the resource is more sensitive, then the mismatch can decrease. 
+
+A similarly simple formula for the change in mismatch exists when two temperature time series differ by a constant temperature: one simply replaces the terms $R'(x_1(t_s))$ in (Eq.~MATCH) by the corresponding integral terms from (Eq.~CONSTANT) and deletes the term $\Delta t$. Rather than writing down this formula explicitly, we illustrate it numerically and show that this linear approximation captures the exact value very well. 
+
+To that end, we calculate the phenology of a consumer and a resource with a much simplified time series that considers only the seasonal variation of mean daily temperatures around an annual mean. We use a standard cosine function $x(t)=M+A\cos(2\pi(t-\phi)/365)$, where $M=6.9$ is the mean annual temperature, $A=15$ is the amplitude, and $\phi=200$ is the offset, so that $t=0$ corresponds to January 1st. (These parameter values correspond to the city of Fredericton, NB.) \\
+
+(PLEASE ADJUST THE FOLLOWING PARAGRAPH ACCORDING TO WHAT YOU ACTUALLY CHOSE IN THE SIMULATIONS FOR FIGURE 2.)
+
+We use the same functional form of the heat accumulation function for consumer and resource but with different parameter values (see Appendix for details). In this simplified model, the end of the seasonal resting period for the resource (consumer) occurs on day 131 (127), the rate curve has its highest slope at 14.6 degrees (23 degrees), and the end of the resting period advanced by about 3.6 (3.8) days per degree increase in mean temperature. Since the rest period of the resource at current temperature regimes ends later and advances more slowly with increasing mean temperature, the mismatch increases over time, but the difference is small. The linear approximation in Eq. 3 captures the actual end of the resting period very well (Fig. 2).
+
+
+
+
+
+
+\end{document}

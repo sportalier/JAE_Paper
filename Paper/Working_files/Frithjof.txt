@@ -1,0 +1,8 @@
+Do you think you could also do the case with the simplified temperature
+curve? I am thinking of the following: fit the existing temperature
+curve with a cosine function (I think you have already done that). Then
+calculate t^* for both species from the formula. Then increase the
+temperature by 1/2 degree, 1, 1/5, 2... and calculate t^* for both.
+Finally, calculate the sensitivity according to the formula. Plot the
+emergence days versus the linear approximation.  Actually, I think you
+have done most of that already. Let me know if you have any questions. 

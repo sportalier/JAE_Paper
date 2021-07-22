@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Manuscript.aux
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+The style file: besjournals.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: Manuscript.bib
+Warning--missing school in Desbiens2007
+You've used 35 entries,
+            2805 wiz_defined-function locations,
+            1316 strings with 19854 characters,
+and the built_in function-call counts, 21507 in all, are:
+= -- 1796
+> -- 957
+< -- 20
++ -- 367
+- -- 333
+* -- 1770
+:= -- 3440
+add.period$ -- 69
+call.type$ -- 35
+change.case$ -- 283
+chr.to.int$ -- 36
+cite$ -- 36
+duplicate$ -- 1473
+empty$ -- 1551
+format.name$ -- 444
+if$ -- 4241
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 316
+newline$ -- 109
+num.names$ -- 142
+pop$ -- 568
+preamble$ -- 1
+purify$ -- 250
+quote$ -- 0
+skip$ -- 517
+stack$ -- 0
+substring$ -- 1101
+swap$ -- 811
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 312
+warning$ -- 1
+while$ -- 140
+width$ -- 0
+write$ -- 385
+(There was 1 warning)
