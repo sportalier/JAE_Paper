@@ -386,7 +386,7 @@ dev.off()
 ### with Lattice
 t1 = 87.36 #84
 bf = -1.32 #-0.12
-cf = 7.14 #12.5
+cf = 7.14 # 12.5
 fstar = 18.6 #17.71
 
 MeanTemp = 6.9;  # Fredericton mean temp
@@ -510,6 +510,42 @@ dev.off()
 # par(mar=c(5,6,4,3))
 # zozo=c(ctot,dtot,atot,btot,layout=c(2,2),merge.legends=F)
 # print(zozo,position=c(0,0,1,1),split=c(1,1,1,1),more=F)
+
+t1 = 87.36 #84
+bf = -1.32 #-0.12
+cf = 7.14 # 12.5
+fstar = 18.6 #17.71
+cf2 = 8.14
+
+MeanTemp = 6.9;  # Fredericton mean temp
+AmpliTemp = 15.5; # Fredericton amplitude temp
+phase = 200;  # Ottawa temperature phase
+dt = 1/24; # dt in 1-hour intervals
+t = seq(1,365,by=dt);  # days in a year
+
+xmean1 = MeanTemp + AmpliTemp * cos(2*pi*(t-phase)/365);
+
+rft = 1/(1+exp(bf*(xmean1-cf)))
+rft = rft[2300:2900]
+rft2 = 1/(1+exp(bf*(xmean1-cf2)))
+rft2 = rft2[2300:2900]
+
+mypanel1 = function(x,y, ...){
+  panel.xyplot(x,y, ...)
+  panel.text(300,0.8,'Consumer', cex = 1.4)
+  panel.text(500,0.5,'Resource', cex = 1.4)
+  panel.text(-20,0.01,'A', cex = 1.4)
+}
+a1 = xyplot(rft~seq(1,length(rft)),type = 'l',lwd = 2, col = 'black',
+            ylab = 'Accumulation rate (R(x))', xlab = 'Temperature (x)',
+            panel = mypanel1,
+            par.settings=list(axis.text=list(cex=2),par.xlab.text=list(cex=1.9),par.ylab.text=list(cex=1.7),
+                              axis.components=list(top=list(tck=0),right=list(tck=0),left=list(tck=0),bottom=list(tck=0))),
+            scales=list(x=list(draw=F),y=list(draw=F))
+)
+a2 = xyplot(rft2~seq(1,length(rft2)), type = 'l', lty = 2, lwd = 2, col = 'black')
+atot = a1 + as.layer(a2)
+
 
 #### warm spell ####
 # derivative curves #
