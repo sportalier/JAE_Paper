@@ -1,0 +1,115 @@
+---
+title: "Anova_total"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Emergence date (past/present data)
+
+
+```{r, echo=FALSE}
+setwd("~/Master_Uottawa/SBW_models/BIOSim_Temperatures/Predictions")
+past = read.csv('4_hourly_Past_Insect.csv',colClasses = c('Site'='factor'))
+
+rcp26 = read.csv('4_hourly_Predicted_RCP_26_Insect.csv',colClasses = c('Site'='factor'))
+rcp45 = read.csv('4_hourly_Predicted_RCP_45_Insect.csv',colClasses = c('Site'='factor'))
+rcp85 = read.csv('4_hourly_Predicted_RCP_85_Insect.csv',colClasses = c('Site'='factor'))
+
+attach(past)
+mod1 = aov(Emergence~Site)
+summary(mod1)
+pairwise.t.test(Emergence,Site,p.adjust.method = 'bonferroni')
+```
+
+## Budburst date (past/present data)
+
+```{r, echo=FALSE}
+mod2 = aov(Budburst~Site)
+summary(mod2)
+pairwise.t.test(Budburst,Site,p.adjust.method = 'bonferroni')
+```
+
+## Mismatch (past/present data)
+
+```{r, echo=FALSE}
+mod3 = aov(Mismatch~Site)
+summary(mod3)
+pairwise.t.test(Mismatch,Site,p.adjust.method = 'bonferroni')
+detach(past)
+```
+
+## Emergence date (RCP 2.6)
+
+```{r, echo=FALSE}
+mod1 = aov(rcp26$Emergence~rcp26$Site)
+summary(mod1)
+pairwise.t.test(rcp26$Emergence,rcp26$Site,p.adjust.method = 'bonferroni')
+```
+
+## Budburst date (RCP 2.6)
+
+```{r, echo=FALSE}
+mod2 = aov(rcp26$Budburst~rcp26$Site)
+summary(mod2)
+pairwise.t.test(rcp26$Budburst,rcp26$Site,p.adjust.method = 'bonferroni')
+```
+
+## Mismatch (RCP 2.6)
+
+```{r, echo=FALSE}
+mod3 = aov(rcp26$Mismatch~rcp26$Site)
+summary(mod3)
+pairwise.t.test(rcp26$Mismatch,rcp26$Site,p.adjust.method = 'bonferroni')
+```
+
+## Emergence date (RCP 4.5)
+
+```{r, echo=FALSE}
+mod1 = aov(rcp45$Emergence~rcp45$Site)
+summary(mod1)
+pairwise.t.test(rcp45$Emergence,rcp45$Site,p.adjust.method = 'bonferroni')
+```
+
+## Budburst date (RCP 4.5)
+
+```{r, echo=FALSE}
+mod2 = aov(rcp45$Budburst~rcp45$Site)
+summary(mod2)
+pairwise.t.test(rcp45$Budburst,rcp45$Site,p.adjust.method = 'bonferroni')
+```
+
+## Mismatch (RCP 4.5)
+
+```{r, echo=FALSE}
+mod3 = aov(rcp45$Mismatch~rcp45$Site)
+summary(mod3)
+pairwise.t.test(rcp45$Mismatch,rcp45$Site,p.adjust.method = 'bonferroni')
+```
+
+## Emergence date (RCP 8.5)
+
+```{r, echo=FALSE}
+mod1 = aov(rcp85$Emergence~rcp85$Site)
+summary(mod1)
+pairwise.t.test(rcp85$Emergence,rcp85$Site,p.adjust.method = 'bonferroni')
+```
+
+## Budburst date (RCP 8.5)
+
+```{r, echo=FALSE}
+mod2 = aov(rcp85$Budburst~rcp85$Site)
+summary(mod2)
+pairwise.t.test(rcp85$Budburst,rcp85$Site,p.adjust.method = 'bonferroni')
+```
+
+## Mismatch (RCP 8.5)
+
+```{r, echo=FALSE}
+mod3 = aov(rcp85$Mismatch~rcp85$Site)
+summary(mod3)
+pairwise.t.test(rcp85$Mismatch,rcp85$Site,p.adjust.method = 'bonferroni')
+```
+

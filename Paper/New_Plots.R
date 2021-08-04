@@ -192,8 +192,16 @@ mycolors = c('white',"#C3C3C3","#969696","#4D4D4D")
 mypanel1 = function(x,y,...){
   panel.superpose(x,y,...)
   panel.text(0.7,103,'A',cex = 1.5)
+  panel.text(3.9,158,'*',cex = 1.7,col='grey50')
+  panel.text(4.9,158,'*',cex = 1.7,col='grey50')
+  panel.text(5.9,158,'*',cex = 1.7,col='grey50')
+  panel.text(2.25,158,'*',cex = 1.7)
+  panel.text(3.25,158,'*',cex = 1.7)
+  panel.text(4.25,158,'*',cex = 1.7)
+  panel.text(5.25,158,'*',cex = 1.7)
+  panel.text(6.25,158,'*',cex = 1.7)
 }
-p1 = bwplot(Emergence~Site, data = total, groups = Model,
+p1 = bwplot(Emergence~Site, data = total, groups = Model,ylim=c(95,162),
        xlab = 'Latitude',ylab = 'Emergence date',
        pch = "|", box.width = 1/6,
        panel = mypanel1,
@@ -210,8 +218,16 @@ p1 = bwplot(Emergence~Site, data = total, groups = Model,
 mypanel2 = function(x,y,...){
   panel.superpose(x,y,...)
   panel.text(0.7,125,'B',cex = 1.5)
+  panel.text(3.9,156,'*',cex = 1.7,col='grey50')
+  panel.text(4.9,156,'*',cex = 1.7,col='grey50')
+  panel.text(5.9,156,'*',cex = 1.7,col='grey50')
+  panel.text(2.25,156,'*',cex = 1.7)
+  panel.text(3.25,156,'*',cex = 1.7)
+  panel.text(4.25,156,'*',cex = 1.7)
+  panel.text(5.25,156,'*',cex = 1.7)
+  panel.text(6.25,156,'*',cex = 1.7)
 }
-p2 = bwplot(Budburst~Site, data = total, groups = Model,
+p2 = bwplot(Budburst~Site, data = total, groups = Model,ylim=c(120,159),
        xlab = 'Latitude',ylab = 'Budburst date',
        pch = "|", box.width = 1/6,
        panel = mypanel2,
@@ -229,8 +245,15 @@ p2 = bwplot(Budburst~Site, data = total, groups = Model,
 mypanel3 = function(x,y,...){
   panel.superpose(x,y,...)
   panel.text(0.7,-25,'C',cex = 1.5)
+  panel.text(4.9,3.5,'*',cex = 1.7,col='grey50')
+  panel.text(5.9,3.5,'*',cex = 1.7,col='grey50')
+  panel.text(2.25,3.5,'*',cex = 1.7)
+  panel.text(3.25,3.5,'*',cex = 1.7)
+  panel.text(4.25,3.5,'*',cex = 1.7)
+  panel.text(5.25,3.5,'*',cex = 1.7)
+  panel.text(6.25,3.5,'*',cex = 1.7)
 }
-p3 = bwplot(Mismatch~Site, data = total, groups = Model,
+p3 = bwplot(Mismatch~Site, data = total, groups = Model,ylim=c(-28,6),
        xlab = 'Latitude',ylab = 'Mismatch (days)',
        pch = "|", box.width = 1/6,
        panel = mypanel3,
@@ -244,7 +267,8 @@ p3 = bwplot(Mismatch~Site, data = total, groups = Model,
                           alternating=1))
       )
 
-setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1")
+#setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1")
+setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1/JAE_Paper/Paper")
 png('Total_Boxplots.png',width = 800,height = 550)
 par(mar=c(5,6,4,3))
 print(p1, split = c(1,1,2,2), more = T)
