@@ -534,12 +534,13 @@ dev.off()
 # par(mar=c(5,6,4,3))
 # zozo=c(ctot,dtot,atot,btot,layout=c(2,2),merge.legends=F)
 # print(zozo,position=c(0,0,1,1),split=c(1,1,1,1),more=F)
-
+#### new figure 1 ####
 t1 = 87.36 #84
 bf = -1.32 #-0.12
 cf = 7.14 # 12.5
 fstar = 18.6 #17.71
 cf2 = 8.14
+bf2 = -1.16
 
 MeanTemp = 6.9;  # Fredericton mean temp
 AmpliTemp = 15.5; # Fredericton amplitude temp
@@ -551,8 +552,9 @@ xmean1 = MeanTemp + AmpliTemp * cos(2*pi*(t-phase)/365);
 
 rft = 1/(1+exp(bf*(xmean1-cf)))
 rft = rft[2300:2900]
-rft2 = 1/(1+exp(bf*(xmean1-cf2)))
+rft2 = 1/(1+exp(bf2*(xmean1-cf2)))
 rft2 = rft2[2300:2900]
+xmean2 = xmean1 - 5
 
 mypanel1 = function(x,y, ...){
   panel.xyplot(x,y, ...)
@@ -570,6 +572,101 @@ a1 = xyplot(rft~seq(1,length(rft)),type = 'l',lwd = 2, col = 'black',
 a2 = xyplot(rft2~seq(1,length(rft2)), type = 'l', lty = 2, lwd = 2, col = 'black')
 atot = a1 + as.layer(a2)
 
+mypanel2 = function(x,y, ...){
+  panel.xyplot(x,y, ...)
+  panel.text(2450,20,'lower latitude /',cex = 1.4)
+  panel.text(2450,17,'global change',cex = 1.4)
+  panel.text(4150,10,'higher latitude /',col = 'grey50',cex = 1.2)
+  panel.text(4150,7,'without global change',col = 'grey50',cex = 1.2)
+  panel.text(-145,-12,'B', cex = 1.4)
+}
+b1 = xyplot(xmean1[150:5000]~seq(1,length(xmean1[150:5000])),ylim=c(-14,25),type='l',lwd=2,col = 'black',
+            xlab = 'Time (t)', ylab = 'Temperatures',
+            panel = mypanel2,
+            par.settings=list(axis.text=list(cex=2),par.xlab.text=list(cex=1.9),par.ylab.text=list(cex=1.9),
+                              axis.components=list(top=list(tck=0),right=list(tck=0),left=list(tck=0),bottom=list(tck=0))),
+            scales=list(x=list(draw=F),y=list(draw=F))
+)
+b2 = xyplot(xmean2[150:5000]~seq(1,length(xmean2[150:5000])), type='l', col = 'grey60',lwd=2)
+btot = b1+as.layer(b2)
+
+xmean2 = xmean1 - 1
+rft3 = 1/(1+exp(bf*(xmean2-cf)))
+rft3 = rft3[2300:2900]
+rft4 = 1/(1+exp(bf2*(xmean2-cf2)))
+rft4 = rft4[2300:2900]
+rft5 = rft2 - 0.2
+rft6 = rft4 -0.2
+
+mypanel3 = function(x,y, ...){
+  panel.xyplot(x,y, ...)
+  panel.text(300,0.8,'Consumer',cex = 1.4)
+  panel.text(550,0.2,'Resource',cex = 1.4)
+  panel.text(-20,-0.3, 'C', cex = 1.4)
+}
+c1 = xyplot(rft~seq(1,length(rft)),type='l',lwd=2,col = 'black',
+            xlab = 'Time (t)', ylab = 'Accumulation rate (R(x(t)))', ylim=c(-0.38,1.1),
+            panel = mypanel3,
+            par.settings=list(axis.text=list(cex=2),par.xlab.text=list(cex=1.9),par.ylab.text=list(cex=1.7),
+                              axis.components=list(top=list(tck=0),right=list(tck=0),left=list(tck=0),bottom=list(tck=0))),
+            scales=list(x=list(draw=F),y=list(draw=F))
+)
+c2 = xyplot(rft5~seq(1,length(rft5)), type='l', lty = 2, lwd = 2, col = 'black')
+c3 = xyplot(rft3~seq(1,length(rft3)), type='l', lwd = 2, col = 'grey60')
+c4 = xyplot(rft6~seq(1,length(rft6)), type='l', lty = 2, lwd = 2, col = 'grey60')
+ctot = c1+as.layer(c2)+as.layer(c3)+as.layer(c4)
+
+toto = rft
+toto2 = rft2 #rft4+0.2
+toto3 = rft3 #rft5+0.2
+ft = cumsum(toto)
+ft2 = cumsum(toto2)
+ft3 = cumsum(toto3)
+ft4 = cumsum(rft4)
+
+vot2x = which(ft2>=90)[1]
+vot2y = ft2[vot2x]
+vot1x = which(ft>=130)[1]
+vot1y = ft[vot1x]
+vot3x = which(ft3>=130)[1]
+vot3y = ft3[vot3x]
+vot4x = which(ft4>=90)[1]
+vot4y = ft4[vot4x]
+
+mypanel4 = function(x,y, ...){
+  panel.xyplot(x,y, ...)
+  panel.text(170,140, expression(paste('F'[c])),cex = 1.4)
+  panel.text(170,100, expression(paste('F'[r])),cex = 1.4)
+  panel.abline(v = vot1x,lty = 2, col='grey70')
+  panel.abline(v = vot2x,lty = 2, col = 'grey70')
+  panel.abline(v = vot3x ,lty = 2, col = 'grey70')
+  panel.abline(v = vot4x ,lty = 2, col = 'grey70')
+  panel.abline(h = 130, lwd = 2, col = 'grey70',lty=3)
+  panel.abline(h = 90, lwd = 2, col = 'grey70',lty=3)
+  #panel.text(480,155,'Within species shift',cex = 1.1)
+  panel.text(480,138,'shift',cex = 1.1)
+  panel.text(510,98,'shift',cex = 1.1)
+  panel.text(540,117,'Mismatch',cex = 1.1,col='grey50')
+  panel.text(440,117,'Mismatch',cex = 1.1,col='black')
+  #panel.text(540,45,'between',cex = 1.1,col='grey50')
+  #panel.text(540,35,'species',cex = 1.1,col='grey50')
+  panel.text(160,15,'D', cex = 1.4)
+  panel.arrows(x0 = vot1x, x1 = vot3x, y0 = 130, y1 = 130, lwd = 2, col = 'black',angle = 25, code = 3, length = 0.1)
+  panel.arrows(x0 = vot2x, x1 = vot4x, y0 = 90, y1 = 90, lwd = 2, col = 'black',angle = 25, code = 3, length = 0.1)
+  panel.arrows(x0 = vot3x, x1 = vot4x, y0 = 110, y1 = 110, lwd = 2, col = 'grey50',angle = 25, code = 3, length = 0.1)
+  panel.arrows(x0 = vot1x, x1 = vot2x, y0 = 110, y1 = 110, lwd = 2, col = 'black',angle = 25, code = 3, length = 0.1)
+}
+d1 = xyplot(ft3~seq(1,length(ft3)),type = 'l',ylim=c(-1,160),xlim=c(150,600),lwd = 2, col = 'grey50',
+            ylab = 'Accumulated quantity', xlab = 'Time (t)',
+            panel = mypanel4,
+            par.settings=list(axis.text=list(cex=2),par.xlab.text=list(cex=1.9),par.ylab.text=list(cex=1.9),
+                              axis.components=list(top=list(tck=0),right=list(tck=0),left=list(tck=0),bottom=list(tck=0))),
+            scales=list(x=list(draw=F),y=list(draw=F))
+)
+d2 = xyplot(ft4~seq(1,length(ft4)),type='l',lwd=2,lty=2,col='grey50')
+d3 = xyplot(ft~seq(1,length(ft)),type='l',lwd=2, col = 'black')
+d4 = xyplot(ft2~seq(1,length(ft2)),type='l',lwd=2,lty=2, col = 'black')
+dtot = d1+as.layer(d2)+as.layer(d3)+as.layer(d4)
 
 #### warm spell ####
 # derivative curves #
