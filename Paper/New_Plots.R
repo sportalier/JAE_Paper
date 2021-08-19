@@ -535,6 +535,9 @@ dev.off()
 # zozo=c(ctot,dtot,atot,btot,layout=c(2,2),merge.legends=F)
 # print(zozo,position=c(0,0,1,1),split=c(1,1,1,1),more=F)
 #### new figure 1 ####
+library(lattice)
+library(latticeExtra)
+
 t1 = 87.36 #84
 bf = -1.32 #-0.12
 cf = 7.14 # 12.5
@@ -590,7 +593,8 @@ b1 = xyplot(xmean1[150:5000]~seq(1,length(xmean1[150:5000])),ylim=c(-14,25),type
 b2 = xyplot(xmean2[150:5000]~seq(1,length(xmean2[150:5000])), type='l', col = 'grey60',lwd=2)
 btot = b1+as.layer(b2)
 
-xmean2 = xmean1 - 1
+#xmean2 = xmean1 - 1
+xmean2 = (MeanTemp-1) + (AmpliTemp-2) * cos(2*pi*(t-phase)/365);
 rft3 = 1/(1+exp(bf*(xmean2-cf)))
 rft3 = rft3[2300:2900]
 rft4 = 1/(1+exp(bf2*(xmean2-cf2)))
@@ -635,8 +639,8 @@ vot4y = ft4[vot4x]
 
 mypanel4 = function(x,y, ...){
   panel.xyplot(x,y, ...)
-  panel.text(170,140, expression(paste('F'[c])),cex = 1.4)
-  panel.text(170,100, expression(paste('F'[r])),cex = 1.4)
+  panel.text(170,140, expression(paste('F'[e])),cex = 1.4)
+  panel.text(170,100, expression(paste('F'[b])),cex = 1.4)
   panel.abline(v = vot1x,lty = 2, col='grey70')
   panel.abline(v = vot2x,lty = 2, col = 'grey70')
   panel.abline(v = vot3x ,lty = 2, col = 'grey70')
@@ -644,15 +648,21 @@ mypanel4 = function(x,y, ...){
   panel.abline(h = 130, lwd = 2, col = 'grey70',lty=3)
   panel.abline(h = 90, lwd = 2, col = 'grey70',lty=3)
   #panel.text(480,155,'Within species shift',cex = 1.1)
-  panel.text(480,138,'shift',cex = 1.1)
-  panel.text(510,98,'shift',cex = 1.1)
-  panel.text(540,117,'Mismatch',cex = 1.1,col='grey50')
-  panel.text(440,117,'Mismatch',cex = 1.1,col='black')
+  panel.text(485,138,'shift',cex = 1.1)
+  panel.text(520,98,'shift',cex = 1.1)
+  panel.text(550,117,'Mismatch',cex = 1.1,col='grey50')
+  panel.text(445,117,'Mismatch',cex = 1.1,col='black')
   #panel.text(540,45,'between',cex = 1.1,col='grey50')
   #panel.text(540,35,'species',cex = 1.1,col='grey50')
   panel.text(160,15,'D', cex = 1.4)
+  panel.text(vot1x,10,expression(paste('t'[e2]^'*')),cex = 1.4)
+  panel.text(vot2x,10,expression(paste('t'[b2]^'*')),cex = 1.4)
+  panel.text(vot3x,10,expression(paste('t'[e1]^'*')),cex = 1.4)
+  panel.text(vot4x,10,expression(paste('t'[b1]^'*')),cex = 1.4)
   panel.arrows(x0 = vot1x, x1 = vot3x, y0 = 130, y1 = 130, lwd = 2, col = 'black',angle = 25, code = 3, length = 0.1)
-  panel.arrows(x0 = vot2x, x1 = vot4x, y0 = 90, y1 = 90, lwd = 2, col = 'black',angle = 25, code = 3, length = 0.1)
+  panel.arrows(x0 = (vot2x+2), x1 = vot2x, y0 = 90, y1 = 90, lwd = 2, col = 'black',angle = 25, code = 2, length = 0.1)
+  panel.arrows(x0 = (vot4x-2), x1 = vot4x, y0 = 90, y1 = 90, lwd = 2, col = 'black',angle = 25, code = 2, length = 0.1)
+  panel.segments(x0 = (vot4x-2), x1 = (vot2x+2), y0 = 90, y1 = 90, lwd =2, lty = 2, col = 'black')
   panel.arrows(x0 = vot3x, x1 = vot4x, y0 = 110, y1 = 110, lwd = 2, col = 'grey50',angle = 25, code = 3, length = 0.1)
   panel.arrows(x0 = vot1x, x1 = vot2x, y0 = 110, y1 = 110, lwd = 2, col = 'black',angle = 25, code = 3, length = 0.1)
 }
@@ -661,12 +671,30 @@ d1 = xyplot(ft3~seq(1,length(ft3)),type = 'l',ylim=c(-1,160),xlim=c(150,600),lwd
             panel = mypanel4,
             par.settings=list(axis.text=list(cex=2),par.xlab.text=list(cex=1.9),par.ylab.text=list(cex=1.9),
                               axis.components=list(top=list(tck=0),right=list(tck=0),left=list(tck=0),bottom=list(tck=0))),
+            #scales=list(x=list(draw=F),y=list(draw=F))
+            #scales=list(x=list(at=c(vot1x,vot2x,vot3x,vot4x),cex = 1.4,
+            #                   labels=c(expression(paste('t'[e2]^'*')),expression(paste('t'[b2]^'*')),
+            #                                                          expression(paste('t'[e1]^'*')),expression(paste('t'[b1]^'*')))),
+            #            y=list(draw=F))
             scales=list(x=list(draw=F),y=list(draw=F))
 )
 d2 = xyplot(ft4~seq(1,length(ft4)),type='l',lwd=2,lty=2,col='grey50')
 d3 = xyplot(ft~seq(1,length(ft)),type='l',lwd=2, col = 'black')
 d4 = xyplot(ft2~seq(1,length(ft2)),type='l',lwd=2,lty=2, col = 'black')
 dtot = d1+as.layer(d2)+as.layer(d3)+as.layer(d4)
+
+# png('figure_1D.png',width = 780,height = 480)
+# print(dtot)
+# dev.off()
+
+setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1/JAE_Paper/Paper")
+png('Conceptual.png', width = 800, height = 600)
+par(mar=c(5,6,4,3))
+print(atot, split = c(1,1,2,2), more = T)
+print(btot, split = c(2,1,2,2), more = T)
+print(ctot, split = c(1,2,2,2), more = T)
+print(dtot, split = c(2,2,2,2), more = F)
+dev.off()
 
 #### warm spell ####
 # derivative curves #
@@ -916,8 +944,8 @@ mypanel1 = function(x,y,...){
   panel.text((x1-0.5),0.0055,expression(paste(Delta *'x')),cex=1.2)
   panel.text(24,0.011,'Temperature',cex=1.2)
   panel.text(4,0.008,'Warm spell',cex=1.2,col='grey70')
-  panel.text(5.5,0.01,expression(paste("R'"[1]*'(x)')),cex=1.2,col='grey60')
-  panel.text(22,0.009,expression(paste("R'"[2]*'(x)')),cex=1.2,col='black')
+  panel.text(5.5,0.01,expression(paste("R'"[b]*'(x)')),cex=1.2,col='grey60')
+  panel.text(22,0.009,expression(paste("R'"[e]*'(x)')),cex=1.2,col='black')
   panel.polygon(x=c(x1,x2,x2,x1),y=c(y11,y12,y22,y21),col='grey80',lty=0)
   panel.arrows(x0=4,x1=(cf-0.1),y0=0.0075,y1=0.006,length = 0,col='grey70',lwd=3)
   panel.text(0.5,0.0005,'B',cex = 1.5)
