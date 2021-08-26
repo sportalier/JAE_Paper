@@ -962,6 +962,57 @@ p13 = xyplot(xmean2~seq(-10,30),type='l',col = 'black',lty = 3,lwd=2)
 
 p1 = p11+as.layer(p12)+as.layer(p13)
 
+# no overlap
+# tree
+t1 = 87;  # starting date for heat accumulation
+bf = -1.32;
+cf = 7.14;
+Fb = 18.6;
+
+# tree2
+t2 = 87;  # starting date for heat accumulation
+bf2 = -1.32;
+cf2 = 19.34;
+Fb2 = 18.6;
+
+# TREE
+RM1primetree21 = -bf2*exp(bf2*(xm1-cf2))/(1+exp(bf2*(xm1-cf2)))^2;
+RM1primetree2 = RM1primetree21/30
+treemaxindex2 = which(RM1primetree2==max(RM1primetree2))[1]
+treemax2 = xm1[treemax2]
+
+mypanel2 = function(x,y,...){
+  panel.xyplot(x,y,...)
+  panel.abline(v = treemax2, col='black',lty=2,lwd=3)
+  panel.abline(v = treemax, col='grey60',lty=2,lwd=3)
+  panel.text((x1+0.5),0.0077,expression(paste(Delta *'t')),cex=1.2)
+  panel.text((x1-0.5),0.0055,expression(paste(Delta *'x')),cex=1.2)
+  panel.text(24,0.011,'Temperature',cex=1.2)
+  panel.text(4,0.008,'Warm spell',cex=1.2,col='grey70')
+  panel.text(5.5,0.01,expression(paste("R'"[b]*'(x)')),cex=1.2,col='grey60')
+  panel.text(22,0.009,expression(paste("R'"[e]*'(x)')),cex=1.2,col='black')
+  panel.polygon(x=c(x1,x2,x2,x1),y=c(y11,y12,y22,y21),col='grey80',lty=0)
+  panel.arrows(x0=4,x1=(cf-0.1),y0=0.0075,y1=0.006,length = 0,col='grey70',lwd=3)
+  panel.text(0.5,0.0005,'A',cex = 1.5)
+}
+p21 = xyplot(RM1primetree~xm1,type='l',col='grey60',lwd=3,
+             xlab='Time',ylab=" ",xlim=c(0,27),ylim=c(0,0.012),
+             panel = mypanel2,
+             par.settings=list(axis.text=list(cex=1.5),par.xlab.text=list(cex=1.9),par.ylab.text=list(cex=1.9),
+                               axis.components=list(top=list(tck=0),right=list(tck=0),left=list(tck=0),bottom=list(tck=0))),
+             scales=list(x=list(at=c(treemax,treemax2),labels=labs),y=list(draw=F))
+)
+p22 = xyplot(RM1primetree2~xm1,lwd=3,type='l',col='black')
+p23 = xyplot(xmean2~seq(-10,30),type='l',col = 'black',lty = 3,lwd=2)
+
+p2 = p21+as.layer(p22)+as.layer(p23)
+
+setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1")
+png('Figure2.png',width = 1000, height = 480)
+print(p2, split = c(1,1,2,1), more = T)
+print(p1, split = c(2,1,2,1), more = F)
+dev.off()
+
 ### mismatch
 t1 = seq(1,365);  # days in a year
 t2 = t1 + 100
