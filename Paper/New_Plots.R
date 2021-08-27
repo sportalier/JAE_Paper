@@ -1048,6 +1048,7 @@ p22 = xyplot(tx4~seq(1,length(tx4)),type='l',col='grey70',lwd=3)
 
 p2 = p21+as.layer(p22)
 
+#### linear appraoximation ####
 mypanel3 = function(x,y,...){
   panel.xyplot(x,y,...)
   panel.text(0.15,116,'A',cex = 1.5)
@@ -1064,6 +1065,11 @@ p33 = xyplot(ord~c(1,LL),type='l',col='grey70',lty=2,lwd=1.5)
 p34 = xyplot(ord2~c(1,LL),type='l',lty=2,lwd=1.5,col='black')
 
 p3 = p31+as.layer(p32)+as.layer(p33)+as.layer(p34)
+
+setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1/JAE_Paper/Paper/Supplements")
+cairo_pdf('FigureS1.pdf', width = 12,height = 7)
+print(p3, more = F)
+dev.off()
 
 setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1")
 png('Figure2.png',width = 1000, height = 480)

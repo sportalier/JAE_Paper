@@ -1,6 +1,9 @@
 ---
 title: "Anova of SBW-balsam fir results (past/present)"
-output: pdf_document
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}

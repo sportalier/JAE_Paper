@@ -1,6 +1,10 @@
 ---
 title: "Anova_total"
-output: word_document
+output: 
+  pdf_document: 
+    latex_engine: lualatex
+    keep_tex: yes
+#output: word_document
 ---
 
 ```{r setup, include=FALSE}

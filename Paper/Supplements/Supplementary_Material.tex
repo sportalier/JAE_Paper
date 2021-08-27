@@ -7,6 +7,7 @@
 \usepackage{setspace}
 %\usepackage{mathptmx}
 \usepackage{newtxtext,newtxmath}
+\usepackage{graphicx}
 %\usepackage{lineno}
 \usepackage[english]{babel}
 
@@ -14,6 +15,8 @@
 \pagestyle{fancy}
 \fancyhf{}
 \rfoot{\thepage}
+\lfoot{A temperature-driven model of phenological mismatch \\ Portalier, Candau \& Lutscher}
+\lhead{\includegraphics[height=1 cm, keepaspectratio]{JAE_Logo}}
 
 \setstretch{2}
 
@@ -34,7 +37,8 @@ $^1$: Department of Mathematics and Statistics, University of Ottawa, Ottawa, ON
 $^2$: Natural Resources Canada, Canadian Forest Service, Great Lakes Forestry Centre, Sault Ste. Marie, ON, Canada\\
 $^3$: Department of Biology, University of Ottawa, Ottawa, ON, Canada \\
  
-\vspace{1 cm}
+\vspace{0.5 cm}
+\section{Theoretical developments}
 In this supplementary material, we give the details for the mathematical derivation of the two sensitivity formulas for the end time of the seasonal resting period of a species. The general equation that connects the start time $t_0$, the rate curve $R(x)$ and the threshold $F$ to the end time $t^*$ of the resting period is
 
 \stepcounter{equation}
@@ -82,7 +86,7 @@ As expected, the pattern by which the temperature deviates, $z(t)$, appears in t
 \subsection*{Specific patterns}
 The first case is that the temperature change is constant throughout the period, independent of time. In that case, we can set $\epsilon z(t)=\Delta x$ to be the constant temperature difference. Then the function $z(t)$ drops out of the above integral and the end time is given by
 \stepcounter{equation}
-\begin{equation}
+\begin{equation}\label{byconstant}
     t^*(\epsilon) \approx t^*(0) - \Delta x \frac{- \int _{t_0} ^{t^*} R'(x(t)) \mathrm{d}t}{R(x(t^*))} \tag*{Eq. S\theequation}
 \end{equation}
 Since $R'(x)>0$ and $R(x)>0$, the end time decreases if the temperature increases, i.e., the phenology advances. We knew this already from general consideration, but now we have an explicit expression for how much the advance is per degree increase. \par
@@ -94,10 +98,11 @@ The second case in which we can simplify the general formula is that there is a 
 \end{equation}
 Hence, the expression for the end time is approximately
 \stepcounter{equation}
-\begin{equation}
+\begin{equation}\label{byspell}
     t^*(\epsilon) \approx t^*(0)-\Delta x \frac{\Delta t R'(x(t_s))}{R(x(t^*))} \tag*{Eq. S\theequation}
 \end{equation}
 This means that the end time is most sensitive to a warm or cold spell when the derivative of the rate function is the highest, all other things being equal. \par
+The two formulas (\ref{byconstant} and \ref{byspell}) may seem different, but they express the same idea. One has to integrate $R'$ for all times where the two time series differ. When the two time series differ by a constant for all times, the one has to integrate over the entire time series. When the two time series differ only on an interval of length $\Delta t$, then one has to integrate over only that interval. If the interval is short, then the value of $R(x(t))$ does not change much and therefore the integral is approximated by the product of the length of the interval ($\Delta t$) and the value of the integrand ($R(x(t_s))$). 
 
 \subsection*{Derivative of the rate function}
 \stepcounter{equation}
@@ -114,5 +119,310 @@ which is positive since $b$ is negative. To find the maximum of the derivative, 
 \begin{equation}
     R''(x) = \frac{-b^2 exp(b(x-c))(1-exp(b(x-c)))}{(1+exp(b(x-c)))^3} \tag*{Eq. S\theequation}
 \end{equation}
-The maximum of $R’$ occurs where $R’’ = 0$, which happens when $x = c$ (see Fig. 2B).
+The maximum of $R’$ occurs where $R’’ = 0$, which happens when $x = c$ (see Fig. 2).
+
+\section{Analysis of variance}
+Here are the full results of the analysis of variance done on emergence date, budburst date and mismatch across latitude, for past/present temperatures, and for the three RCP scenarios. There are $6$ sites ranged from site 1 (southern site: $44.5$ N) to site 6 (northern site: $49.5$ N) (see Fig. 6 and main text for details). Analysis were performed with R.
+\subsection{Past/present data}
+\subsubsection*{Emergence date}
+
+\begin{verbatim}
+##              Df Sum Sq Mean Sq F value  Pr(>F)    
+## Site          5   3374   674.8   17.89 3.2e-13 ***
+## Residuals   120   4527    37.7                    
+## 
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pairwise comparisons using t tests with pooled SD 
+## 
+##       Site1   Site2   Site3   Site4   Site5  
+## Site2 0.20440   -       -       -       -      
+## Site3 1.00000 0.64190   -       -       -      
+## Site4 0.00574 1.00000 0.02647   -       -      
+## Site5 2.0e-09 0.00021 2.0e-08 0.01493   -      
+## Site6 1.5e-08 0.00102 1.4e-07 0.05283 1.00000
+## 
+## P value adjustment method: bonferroni
+\end{verbatim}
+
+\subsubsection*{Budburst date}
+
+\begin{verbatim}
+##              Df Sum Sq Mean Sq F value   Pr(>F)    
+## Site          5   1332  266.43   21.72 1.94e-15 ***
+## Residuals   120   1472   12.26                     
+## 
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pairwise comparisons using t tests with pooled SD 
+##  
+##       Site1   Site2   Site3   Site4   Site5  
+## Site2 0.21247   -       -       -       -      
+## Site3 1.00000 1.00000   -       -       -      
+## Site4 0.00062 1.00000 0.01185   -       -      
+## Site5 6.5e-09 0.00050 3.5e-07 0.18502   -      
+## Site6 3.1e-12 8.8e-07 2.2e-10 0.00155 1.00000
+## 
+## P value adjustment method: bonferroni
+\end{verbatim}
+
+\subsubsection*{Mismatch}
+
+\begin{verbatim}
+##              Df Sum Sq Mean Sq F value  Pr(>F)    
+## Site          5  545.7  109.13   11.08 8.7e-09 ***
+## Residuals   120 1182.1    9.85                    
+## 
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pairwise comparisons using t tests with pooled SD 
+## 
+##       Site1   Site2  Site3   Site4  Site5 
+## Site2 0.5382    -      -       -      -     
+## Site3 1.0000  0.5175   -       -      -     
+## Site4 0.2684  1.0000 0.2572    -      -     
+## Site5 1.4e-07 0.0014 1.3e-07 0.0038   -     
+## Site6 0.0042  1.0000 0.0039  1.0000 0.2517
+## 
+## P value adjustment method: bonferroni
+\end{verbatim}
+
+\subsection{RCP 2.6 data}
+\subsubsection*{Emergence date}
+
+\begin{verbatim}
+##               Df Sum Sq Mean Sq F value Pr(>F)    
+## Site     5 305237   61047    3334 <2e-16 ***
+## Residuals   7194 131707      18                   
+## 
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pairwise comparisons using t tests with pooled SD 
+##  
+##       Site1  Site2  Site3  Site4  Site5 
+## Site2 <2e-16   -      -      -      -     
+## Site3 <2e-16 <2e-16   -      -      -     
+## Site4 <2e-16 <2e-16 <2e-16   -      -     
+## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -     
+## Site6 <2e-16 <2e-16 <2e-16 <2e-16 <2e-16
+## 
+## P value adjustment method: bonferroni
+\end{verbatim}
+
+\subsubsection*{Budburst date}
+
+\begin{verbatim}
+##               Df Sum Sq Mean Sq F value Pr(>F)    
+## Site     5  94260   18852    2896 <2e-16 ***
+## Residuals   7194  46827       7                   
+## 
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pairwise comparisons using t tests with pooled SD 
+## 
+##       Site1  Site2  Site3  Site4  Site5
+## Site2 <2e-16   -      -      -      -    
+## Site3 <2e-16 <2e-16   -      -      -    
+## Site4 <2e-16 <2e-16 <2e-16   -      -    
+## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -    
+## Site6 <2e-16 <2e-16 <2e-16 <2e-16 1    
+## 
+## P value adjustment method: bonferroni
+\end{verbatim}
+
+\subsubsection*{Mismatch}
+
+\begin{verbatim}
+##               Df Sum Sq Mean Sq F value Pr(>F)    
+## Site     5  66174   13235    2316 <2e-16 ***
+## Residuals   7194  41116       6                   
+## 
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pairwise comparisons using t tests with pooled SD 
+##  
+##       Site1  Site2  Site3  Site4  Site5 
+## Site2 <2e-16   -      -      -      -     
+## Site3 <2e-16 <2e-16   -      -      -     
+## Site4 <2e-16 <2e-16 <2e-16   -      -     
+## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -     
+## Site6 <2e-16 <2e-16 <2e-16 <2e-16 <2e-16
+## 
+## P value adjustment method: bonferroni
+\end{verbatim}
+
+\subsection{RCP 4.5 data}
+\subsubsection*{Emergence date}
+
+\begin{verbatim}
+##               Df Sum Sq Mean Sq F value Pr(>F)    
+## Site     5 139304   27861    1045 <2e-16 ***
+## Residuals   7194 191768      27                   
+## 
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pairwise comparisons using t tests with pooled SD 
+##  
+##       Site1  Site2  Site3  Site4  Site5
+## Site2 <2e-16   -      -      -      -    
+## Site3 <2e-16 <2e-16   -      -      -    
+## Site4 <2e-16 1.000  <2e-16   -      -    
+## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -    
+## Site6 <2e-16 <2e-16 <2e-16 <2e-16 0.006
+## 
+## P value adjustment method: bonferroni
+\end{verbatim}
+
+\subsubsection*{Budburst date}
+
+\begin{verbatim}
+##               Df Sum Sq Mean Sq F value Pr(>F)    
+## Site     5  51477   10295    1046 <2e-16 ***
+## Residuals   7194  70813      10                   
+## 
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pairwise comparisons using t tests with pooled SD 
+## 
+##       Site1  Site2  Site3  Site4  Site5 
+## Site2 <2e-16   -      -      -      -     
+## Site3 <2e-16 <2e-16   -      -      -     
+## Site4 <2e-16 0.62   <2e-16   -      -     
+## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -     
+## Site6 <2e-16 <2e-16 <2e-16 <2e-16 <2e-16
+## 
+## P value adjustment method: bonferroni
+\end{verbatim}
+
+\subsubsection*{Mismatch}
+
+\begin{verbatim}
+##               Df Sum Sq Mean Sq F value Pr(>F)    
+## Site     5  23457    4691   651.4 <2e-16 ***
+## Residuals   7194  51815       7                   
+## 
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pairwise comparisons using t tests with pooled SD 
+## 
+##       Site1  Site2  Site3  Site4  Site5 
+## Site2 <2e-16   -      -      -      -     
+## Site3 <2e-16 <2e-16   -      -      -     
+## Site4 <2e-16 0.22   <2e-16   -      -     
+## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -     
+## Site6 <2e-16 <2e-16 <2e-16 <2e-16 <2e-16
+## 
+## P value adjustment method: bonferroni
+\end{verbatim}
+
+\subsection{RCP 8.5 data}
+\subsubsection*{Emergence date}
+
+
+\begin{verbatim}
+##               Df Sum Sq Mean Sq F value Pr(>F)    
+## Site     5 155376   31075   727.7 <2e-16 ***
+## Residuals   7194 307197      43                   
+## 
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pairwise comparisons using t tests with pooled SD 
+## 
+##       Site1  Site2  Site3  Site4  Site5
+## Site2 <2e-16   -      -      -      -    
+## Site3 <2e-16 <2e-16   -      -      -    
+## Site4 <2e-16 0.202  <2e-16   -      -    
+## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -    
+## Site6 <2e-16 <2e-16 <2e-16 <2e-16 0.014
+## 
+## P value adjustment method: bonferroni
+\end{verbatim}
+
+\subsubsection*{Budburst date}
+
+\begin{verbatim}
+##               Df Sum Sq Mean Sq F value Pr(>F)    
+## Site     5  58046   11609   690.5 <2e-16 ***
+## Residuals   7194 120951      17                   
+## 
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pairwise comparisons using t tests with pooled SD 
+##  
+##       Site1   Site2   Site3   Site4   Site5  
+## Site2 < 2e-16   -       -       -       -      
+## Site3 8.2e-16 < 2e-16   -       -       -      
+## Site4 < 2e-16 0.0097  < 2e-16   -       -      
+## Site5 < 2e-16 < 2e-16 < 2e-16 < 2e-16   -      
+## Site6 < 2e-16 < 2e-16 < 2e-16 < 2e-16 < 2e-16
+## 
+## P value adjustment method: bonferroni
+\end{verbatim}
+
+\subsubsection*{Mismatch}
+
+\begin{verbatim}
+##               Df Sum Sq Mean Sq F value Pr(>F)    
+## Site     5  25363    5073   572.3 <2e-16 ***
+## Residuals   7194  63763       9                   
+## 
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##  Pairwise comparisons using t tests with pooled SD 
+## 
+##       Site1   Site2   Site3   Site4   Site5  
+## Site2 < 2e-16   -       -       -       -      
+## Site3 < 2e-16 < 2e-16   -       -       -      
+## Site4 < 2e-16 1       < 2e-16   -       -      
+## Site5 < 2e-16 < 2e-16 < 2e-16 < 2e-16   -      
+## Site6 < 2e-16 < 2e-16 < 2e-16 < 2e-16 1.1e-11
+## 
+## P value adjustment method: bonferroni
+\end{verbatim}
+
+\clearpage
+\begin{figure}[ht]
+\begin{center}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\setcounter{figure}{0}
+\includegraphics[width = 16 cm, keepaspectratio]{FigureS1}
+\caption{\doublespacing Effects of a constant temperature difference on species phenology. Black is the consumer (SBW), and grey is the resource (balsam fir). A constant temperature difference advances species phenology. Dotted is the predicted value (Eq. 3 used with the $R$ functions of SBW and balsam fir), dashed is the linear approximation from the model with simple time series.}
+\end{center}
+\end{figure}
 \end{document}
