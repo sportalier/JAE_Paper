@@ -1,548 +1,612 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2021.2.5)  27 AUG 2021 02:07
+This is LuaTeX, Version 1.10.0 (MiKTeX 2.9.7200 64-bit)  (format=lualatex 2021.7.23)  27 AUG 2021 11:39
  restricted system commands enabled.
 **Supplementary_Material.tex
 (./Supplementary_Material.tex
-LaTeX2e <2020-02-02> patch level 5
-Lua module: luaotfload-main 2020-09-02 3.15 luaotfload entry point
-Lua module: luaotfload-init 2020-09-02 3.15 luaotfload submodule / initializatio
+LaTeX2e <2019-10-01> patch level 1
+Lua module: luaotfload-main 2019-09-13 3.00 luaotfload entry point
+Lua module: luaotfload-init 2019-09-13 3.00 luaotfload submodule / initializatio
 n
-Lua module: lualibs 2020-08-31 2.72 ConTeXt Lua standard libraries.
-Lua module: lualibs-extended 2020-08-31 2.72 ConTeXt Lua libraries -- extended c
+Lua module: lualibs 2019-08-11 2.67 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2019-08-11 2.67 ConTeXt Lua libraries -- extended c
 ollection.
-Lua module: luaotfload-log 2020-09-02 3.15 luaotfload submodule / logging
-Lua module: luaotfload-parsers 2020-09-02 3.15 luaotfload submodule / parsers
-Lua module: luaotfload-configuration 2020-09-02 3.15 luaotfload submodule / conf
+Lua module: luaotfload-log 2019-09-13 3.00 luaotfload submodule / logging
+Lua module: luaotfload-parsers 2019-09-13 3.00 luaotfload submodule / filelist
+Lua module: luaotfload-configuration 2019-09-13 3.00 luaotfload submodule / conf
 ig file reader
-luaotfload | conf : Root cache directory is "C:/Users/sebca/AppData/Local/MiKTeX
-/luatex-cache/generic/names".
-luaotfload | init : Loading fontloader "fontloader-2020-08-31.lua" from kpse-res
-olved path "C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/luatex/luaotfload/f
-ontloader-2020-08-31.lua".
-Lua-only attribute luaotfload@noligature = 1
-Lua-only attribute luaotfload@syllabe = 2
-luaotfload | init : Context OpenType loader version 0x1.8e353f7ced917p+1
-Lua module: luaotfload-fallback 2020-09-02 3.15 luaotfload submodule / fallback
-Lua module: luaotfload-multiscript 2020-09-02 3.15 luaotfload submodule / multis
-cript
-Lua module: luaotfload-script 2020-09-02 3.15 luaotfload submodule / Script help
-ers
+luaotfload | conf : Root cache directory is C:/Users/sport/AppData/Local/MiKTeX/
+2.9/luatex-cache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2019-08-11.lua” from kpse
+-resolved path “C:/Program Files/MiKTeX 2.9/tex/luatex/luaotfload/fontloader-2
+019-08-11.lua”.
+Lua-only attribute luaotfload@state = 2
+Lua-only attribute luaotfload@noligature = 3
+Lua-only attribute luaotfload@syllabe = 4
+luaotfload | init : Context OpenType loader version “3.109”
 Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
 Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
-Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
-Lua module: luaotfload-loaders 2020-09-02 3.15 luaotfload submodule / callback h
+Lua module: luaotfload-loaders 2019-09-13 3.00 luaotfload submodule / callback h
 andling
 Inserting `luaotfload.define_font' at position 1 in `define_font'.
-Lua module: luaotfload-database 2020-09-02 3.15 luaotfload submodule / database
-Lua module: luaotfload-unicode 2020-09-02 3.15 luaotfload submodule / Unicode he
+Lua module: luaotfload-database 2019-09-13 3.00 luaotfload submodule / database
+Lua module: luaotfload-unicode 2019-09-13 3.00 luaotfload submodule / Unicode he
 lpers
-Lua module: luaotfload-colors 2020-09-02 3.15 luaotfload submodule / color
-Lua-only attribute luaotfload_color_attribute = 3
-Lua module: luaotfload-resolvers 2020-09-02 3.15 luaotfload submodule / resolver
+Lua module: luaotfload-colors 2019-09-13 3.00 luaotfload submodule / color
+Lua-only attribute luaotfload_color_attribute = 5
+Lua module: luaotfload-resolvers 2019-09-13 3.00 luaotfload submodule / resolver
 s
-luaotfload | conf : Root cache directory is "C:/Users/sebca/AppData/Local/MiKTeX
-/luatex-cache/generic/names".
-Lua module: luaotfload-features 2020-09-02 3.15 luaotfload submodule / features
-Lua module: luaotfload-harf-define 2020-09-02 3.15 luaotfload submodule / HarfBu
-zz font loading
-Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
-Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
-Lua module: luaotfload-harf-plug 2020-09-02 3.15 luaotfload submodule / HarfBuzz
- shaping
-Inserting `Harf pre_output_filter callback' at position 1 in `pre_output_filter'
-.
-Inserting `Harf wrapup_run callback' at position 1 in `wrapup_run'.
-Inserting `Harf finish_pdffile callback' at position 1 in `finish_pdffile'.
-Inserting `Harf glyph_info callback' at position 1 in `glyph_info'.
-Lua module: luaotfload-letterspace 2020-09-02 3.15 luaotfload submodule / letter
-spacing
-Lua module: luaotfload-embolden 2020-09-02 3.15 luaotfload submodule / embolden
-Lua module: luaotfload-notdef 2020-09-02 3.15 luaotfload submodule / notdef
-Lua module: luaotfload-suppress 2020-09-02 3.15 luaotfload submodule / suppress
-Lua module: luaotfload-szss 2020-09-02 3.15 luaotfload submodule / Special featu
-re handling
-Lua module: luaotfload-auxiliary 2020-09-02 3.15 luaotfload submodule / auxiliar
+luaotfload | conf : Root cache directory is C:/Users/sport/AppData/Local/MiKTeX/
+2.9/luatex-cache/generic/names.
+Lua module: luaotfload-features 2019-09-13 3.00 luaotfload submodule / features
+Lua module: luaotfload-letterspace 2019-09-13 3.00 luaotfload submodule / color
+Lua module: luaotfload-embolden 2019-09-13 3.00 luaotfload submodule / color
+Lua module: luaotfload-notdef 2019-09-13 3.00 luaotfload submodule / color
+Lua module: luaotfload-auxiliary 2019-09-13 3.00 luaotfload submodule / auxiliar
 y functions
 Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
 font'.
-Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
-t'.
-Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 _font'.
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
 t_unsafe'.
-Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
-Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
-Lua module: luaotfload-tounicode 2020-09-02 3.15 luaotfload submodule / tounicod
-e
-Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
-. L3 programming layer <2020-09-03>
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls
-Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/base/size12.clo
-File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from C:/Users/sebca/AppData/Local/M
-iKTeX/luatex-cache/generic/names/luaotfload-names.luc)
-\c@part=\count164
-\c@section=\count165
-\c@subsection=\count166
-\c@subsubsection=\count167
-\c@paragraph=\count168
-\c@subparagraph=\count169
-\c@figure=\count170
-\c@table=\count171
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen134
+Inserting `luaotfload.aux.set_xheight' at position 4 in `luaotfload.patch_font'.
+Lua module: luaotfload-multiscript 2019-09-13 3.00 luaotfload submodule / multis
+cript
+Inserting `luaotfload.rewrite_fontname' at position 5 in `luaotfload.patch_font'
+.
+luaotfload | main : initialization completed in 2.297 seconds
+("C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls"
+Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
+("C:/Program Files/MiKTeX 2.9/tex/latex/base/size12.clo"
+File: size12.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from C:/Users/sport/AppData/Local/M
+iKTeX/2.9/luatex-cache/generic/names/luaotfload-names.luc)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
 )
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip49
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty"
+Package: amsmath 2019/04/01 v2.17c AMS math features
+\@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks15
-\ex@=\dimen135
+\@emptytoks=\toks14
+\ex@=\dimen103
 ))
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen136
+\pmbraise@=\dimen104
 )
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count172
+\inf@bad=\count88
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count173
-\leftroot@=\count174
+\uproot@=\count89
+\leftroot@=\count90
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count175
-\DOTSCASE@=\count176
+\classnum@=\count91
+\DOTSCASE@=\count92
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box45
-\strutbox@=\box46
-\big@size=\dimen137
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count177
-\c@MaxMatrixCols=\count178
-\dotsspace@=\muskip16
-\c@parentequation=\count179
-\dspbrk@lvl=\count180
-\tag@help=\toks16
-\row@=\count181
-\column@=\count182
-\maxfields@=\count183
-\andhelp@=\toks17
-\eqnshift@=\dimen138
-\alignsep@=\dimen139
-\tagshift@=\dimen140
-\tagwidth@=\dimen141
-\totwidth@=\dimen142
-\lineht@=\dimen143
-\@envbody=\toks18
-\multlinegap=\skip50
-\multlinetaggap=\skip51
-\mathdisplay@stack=\toks19
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks15
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2855.
+LaTeX Info: Redefining \] on input line 2856.
 )
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amssymb.sty
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.st
-y
-Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks20
-)
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count184
-\Gm@cntv=\count185
-\c@Gm@tempcnt=\count186
-\Gm@bindingoffset=\dimen144
-\Gm@wd@mp=\dimen145
-\Gm@odd@mp=\dimen146
-\Gm@even@mp=\dimen147
-\Gm@layoutwidth=\dimen148
-\Gm@layoutheight=\dimen149
-\Gm@layouthoffset=\dimen150
-\Gm@layoutvoffset=\dimen151
-\Gm@dimlist=\toks21
+("C:/Program Files/MiKTeX 2.9/tex/latex/geometry/geometry.sty"
+Package: geometry 2018/04/16 v5.8 Page Geometry
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg)) (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footer
-s
-\f@nch@headwidth=\skip52
-\f@nch@O@elh=\skip53
-\f@nch@O@erh=\skip54
-\f@nch@O@olh=\skip55
-\f@nch@O@orh=\skip56
-\f@nch@O@elf=\skip57
-\f@nch@O@erf=\skip58
-\f@nch@O@olf=\skip59
-\f@nch@O@orf=\skip60
-) (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.sty
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics/keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count100
+\Gm@cntv=\count101
+\c@Gm@tempcnt=\count102
+\Gm@bindingoffset=\dimen112
+\Gm@wd@mp=\dimen113
+\Gm@odd@mp=\dimen114
+\Gm@even@mp=\dimen115
+\Gm@layoutwidth=\dimen116
+\Gm@layoutheight=\dimen117
+\Gm@layouthoffset=\dimen118
+\Gm@layoutvoffset=\dimen119
+\Gm@dimlist=\toks20
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/geometry/geometry.cfg"))
+("C:/Program Files/MiKTeX 2.9/tex/latex/fancyhdr/fancyhdr.sty"
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip46
+\f@nch@O@elh=\skip47
+\f@nch@O@erh=\skip48
+\f@nch@O@olh=\skip49
+\f@nch@O@orh=\skip50
+\f@nch@O@elf=\skip51
+\f@nch@O@erf=\skip52
+\f@nch@O@olf=\skip53
+\f@nch@O@orf=\skip54
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/setspace/setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
-) (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/newtxtext.sty
-Package: newtxtext 2020/09/19 v1.630
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/newtx/newtxtext.sty"
+Package: newtxtext 2018/03/27 v1.531
 
-`newtxtext' v1.630, 2020/09/19 Text macros taking advantage of TeX-Gyre Termes 
-fonts (msharpe)
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/fontaxes/fontaxes.sty
-Package: fontaxes 2020/07/21 v1.0e Font selection axes
+`newtxtext' v1.531, 2018/03/27 Text macros taking advantage of TeX-Gyre Termes 
+fonts (msharpe) ("C:/Program Files/MiKTeX 2.9/tex/latex/fontaxes/fontaxes.sty"
+Package: fontaxes 2014/03/23 v1.0d Font selection axes
 LaTeX Info: Redefining \upshape on input line 29.
 LaTeX Info: Redefining \itshape on input line 31.
 LaTeX Info: Redefining \slshape on input line 33.
-LaTeX Info: Redefining \swshape on input line 35.
 LaTeX Info: Redefining \scshape on input line 37.
-LaTeX Info: Redefining \sscshape on input line 39.
-LaTeX Info: Redefining \ulcshape on input line 41.
-LaTeX Info: Redefining \textsw on input line 47.
-LaTeX Info: Redefining \textssc on input line 48.
-LaTeX Info: Redefining \textulc on input line 49.
 )
-\ntx@fs=\dimen152
-
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty
+\ntx@fs=\dimen120
+("C:/Program Files/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty"
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/xkeyval/xkeyval.tex
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks22
-\XKV@tempa@toks=\toks23
+("C:/Program Files/MiKTeX 2.9/tex/generic/xkeyval/xkeyval.tex"
+("C:/Program Files/MiKTeX 2.9/tex/generic/xkeyval/xkvutils.tex"
+\XKV@toks=\toks21
+\XKV@tempa@toks=\toks22
 )
-\XKV@depth=\count187
+\XKV@depth=\count103
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/08/24 v2.5j e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count188
+("C:/Program Files/MiKTeX 2.9/tex/latex/etoolbox/etoolbox.sty"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count104
 )
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/xstring/xstring.tex
-\integerpart=\count189
-\decimalpart=\count190
-)
-Package: xstring 2019/02/06 v1.83 String manipulations (CT)
-) (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/carlisle/scalefnt.sty)
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty
-Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 
-112.
+("C:/Program Files/MiKTeX 2.9/tex/latex/base/fontenc.sty"
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/t1ntxtlf.fd
-File: t1ntxtlf.fd 2015/01/17 v1.0 font definition file for T1/ntx/tlf
+("C:/Program Files/MiKTeX 2.9/tex/latex/base/t1enc.def"
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 112.
-)
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/base/textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-LaTeX Font Info:    Changing ? sub-encoding to TS1/0 on input line 75.
-)
-\ntxt@cntz=\count191
-LaTeX Font Info:    Redeclaring math symbol \mathsterling on input line 316.
-)
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/newtxmath.sty
-Package: newtxmath 2021/03/27 v1.642
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 105
+.
 
-`newtxmath' v1.642, 2021/03/27 Math macros based originally on txfonts (msharpe
-) (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+("C:/Program Files/MiKTeX 2.9/tex/latex/lm/t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+("C:/Program Files/MiKTeX 2.9/tex/latex/base/textcomp.sty"
+Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+Package textcomp Info: Changing ? sub-encoding to TS1/0 on input line 80.
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/oberdiek/centernot.sty
+LaTeX Font Info:    Redeclaring math symbol \mathsterling on input line 233.
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/newtx/newtxmath.sty"
+Package: newtxmath 2019/10/09 v1.602
+
+`newtxmath' v1.602, 2019/10/09 Math macros based originally on txfonts (msharpe
+) ("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX detected.
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/centernot.sty"
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
-\tx@cntz=\count192
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/binhex/binhex.tex)
-\tx@Isdigit=\count193
-\tx@IsAlNum=\count194
-\tx@tA=\toks24
-\tx@tB=\toks25
-\tx@su=\read2
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 360.
+\tx@cntz=\count105
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/binhex/binhex.tex")
+\tx@Isdigit=\count106
+\tx@IsAlNum=\count107
+\tx@tA=\toks23
+\tx@tB=\toks24
+\tx@su=\read1
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 294.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/ntxtlf/m/n on input line 360.
+(Font)                  OT1/cmr/m/n --> OT1/ntxtlf/m/n on input line 294.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/ntxtlf/m/n on input line 360.
+(Font)                  OT1/cmr/bx/n --> OT1/ntxtlf/m/n on input line 294.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/ntxtlf/m/n --> OT1/ntxtlf/b/n on input line 361.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 369.
+(Font)                  OT1/ntxtlf/m/n --> OT1/ntxtlf/b/n on input line 295.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 303.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/qhv/m/n on input line 369.
+(Font)                  OT1/cmss/m/n --> T1/qhv/m/n on input line 303.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/qhv/m/n on input line 369.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 370.
+(Font)                  OT1/cmss/bx/n --> T1/qhv/m/n on input line 303.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 304.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/ntxtlf/m/it on input line 370.
+(Font)                  OT1/cmr/m/it --> OT1/ntxtlf/m/it on input line 304.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/ntxtlf/m/it on input line 370.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 371.
+(Font)                  OT1/cmr/bx/it --> OT1/ntxtlf/m/it on input line 304.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 305.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/ntxtt/m/n on input line 371.
+(Font)                  OT1/cmtt/m/n --> T1/ntxtt/m/n on input line 305.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/ntxtt/m/n on input line 371.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 373.
+(Font)                  OT1/cmtt/m/n --> T1/ntxtt/m/n on input line 305.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 307.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/ntxtlf/b/n on input line 373.
+(Font)                  OT1/cmr/bx/n --> OT1/ntxtlf/b/n on input line 307.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/ntxtlf/b/n on input line 373.
+(Font)                  OT1/cmr/bx/n --> OT1/ntxtlf/b/n on input line 307.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/ntxtlf/m/it --> OT1/ntxtlf/b/it on input line 374.
+(Font)                  OT1/ntxtlf/m/it --> OT1/ntxtlf/b/it on input line 308.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/qhv/m/n --> T1/qhv/b/n on input line 375.
+(Font)                  T1/qhv/m/n --> T1/qhv/b/n on input line 309.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/ntxtt/m/n --> T1/ntxtt/b/n on input line 376.
-LaTeX Font Info:    Redeclaring symbol font `letters' on input line 477.
+(Font)                  T1/ntxtt/m/n --> T1/ntxtt/b/n on input line 310.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 386.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/ntxmi/m/it on input line 477.
+(Font)                  OML/cmm/m/it --> OML/ntxmi/m/it on input line 386.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/ntxmi/m/it on input line 477.
+(Font)                  OML/cmm/b/it --> OML/ntxmi/m/it on input line 386.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/ntxmi/m/it --> OML/ntxmi/b/it on input line 478.
+(Font)                  OML/ntxmi/m/it --> OML/ntxmi/b/it on input line 387.
 \symlettersA=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
-(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 533.
-LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 535.
-LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 554.
+(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 428.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 430.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 449.
 LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 554.
+(Font)              `symbols' in the math version `normal' on input line 449.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> LMS/ntxsy/m/n on input line 554.
+(Font)                  OMS/cmsy/m/n --> LMS/ntxsy/m/n on input line 449.
 LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 554.
+(Font)              `symbols' in the math version `bold' on input line 449.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> LMS/ntxsy/m/n on input line 554.
+(Font)                  OMS/cmsy/b/n --> LMS/ntxsy/m/n on input line 449.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  LMS/ntxsy/m/n --> LMS/ntxsy/b/n on input line 555.
+(Font)                  LMS/ntxsy/m/n --> LMS/ntxsy/b/n on input line 450.
 \symAMSm=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `AMSm' in version `bold'
-(Font)                  U/ntxsym/m/n --> U/ntxsym/b/n on input line 578.
+(Font)                  U/ntxsym/m/n --> U/ntxsym/b/n on input line 473.
 \symsymbolsC=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
-(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 599.
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 612.
+(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 494.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 507.
 LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 61
-2.
+(Font)              `largesymbols' in the math version `normal' on input line 50
+7.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 612.
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 507.
 LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 612.
+(Font)              `largesymbols' in the math version `bold' on input line 507.
 
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 612.
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 507.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 613.
+(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 508.
 \symlargesymbolsTXA=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
-(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 627.
-\tx@sbptoks=\toks26
-LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 850.
-LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 851.
-LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 852.
-LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 853.
-LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 854.
-LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 855.
-LaTeX Font Info:    Redeclaring math delimiter \langle on input line 856.
-LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 858.
-LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 862.
-LaTeX Font Info:    Redeclaring math delimiter \vert on input line 863.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 934.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 935.
-LaTeX Font Info:    Redeclaring math accent \vec on input line 1998.
-LaTeX Info: Redefining \Bbbk on input line 2786.
-LaTeX Info: Redefining \not on input line 2935.
+(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 522.
+\tx@sbptoks=\toks25
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 730.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 731.
+LaTeX Font Info:    Redeclaring math delimiter \lmoustache on input line 732.
+LaTeX Font Info:    Redeclaring math delimiter \rmoustache on input line 733.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 739.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 740.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 741.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 742.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 743.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 744.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 745.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 747.
+LaTeX Font Info:    Redeclaring math symbol \mid on input line 749.
+LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 751.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 752.
+LaTeX Font Info:    Redeclaring math symbol \parallel on input line 753.
+LaTeX Font Info:    Redeclaring math delimiter \Arrowvert on input line 754.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 755.
+LaTeX Font Info:    Redeclaring math delimiter \updownarrow on input line 757.
+LaTeX Font Info:    Redeclaring math delimiter \Updownarrow on input line 758.
+LaTeX Font Info:    Redeclaring math delimiter \lvert on input line 763.
+LaTeX Font Info:    Redeclaring math delimiter \rvert on input line 764.
+LaTeX Font Info:    Redeclaring math delimiter \lVert on input line 765.
+LaTeX Font Info:    Redeclaring math delimiter \rVert on input line 766.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 819.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 820.
+LaTeX Font Info:    Redeclaring math delimiter \ulcorner on input line 1448.
+LaTeX Font Info:    Redeclaring math delimiter \urcorner on input line 1449.
+LaTeX Font Info:    Redeclaring math delimiter \llcorner on input line 1455.
+LaTeX Font Info:    Redeclaring math delimiter \lrcorner on input line 1456.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 1883.
+\ntx@numstart=\count108
+\ntx@UCstart=\count109
+\ntx@lcstart=\count110
+\ntx@tmpc=\count111
+\ntx@imath=\count112
+\ntx@jmath=\count113
+LaTeX Info: Redefining \not on input line 2498.
 )
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty"
+Package: graphics 2019/10/08 v1.3c Standard LaTeX Graphics (DPC,SPQR)
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics/trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.c
-fg
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: luatex.def on input line 105.
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def
-File: luatex.def 2020/08/26 v1.2 Graphics/color driver for luatex
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics-def/luatex.def"
+File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
 ))
-\Gin@req@height=\dimen153
-\Gin@req@width=\dimen154
-) (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty
-Package: babel 2020/09/01 3.48 The Babel package
-
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.def
-File: babel.def 2020/09/01 3.48 Babel common definitions
-
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
-\bbl@readstream=\read3
-\l@afrikaans=\language2
-Package babel Info: Non-standard hyphenation setup on input line 117.
-\l@ancientgreek=\language3
-\l@armenian=\language4
-\l@assamese=\language5
-\l@basque=\language6
-\l@belarusian=\language7
-\l@bengali=\language8
-\l@bokmal=\language9
-\l@bulgarian=\language10
-\l@catalan=\language11
-\l@churchslavonic=\language12
-\l@classiclatin=\language13
-\l@coptic=\language14
-\l@croatian=\language15
-\l@czech=\language16
-\l@danish=\language17
-\l@dutch=\language18
-\l@esperanto=\language19
-\l@estonian=\language20
-\l@ethiopic=\language21
-\l@finnish=\language22
-\l@french=\language23
-\l@friulan=\language24
-\l@galician=\language25
-\l@georgian=\language26
-\l@german=\language27
-\l@greek=\language28
-\l@gujarati=\language29
-\l@hindi=\language30
-\l@hungarian=\language31
-\l@icelandic=\language32
-\l@indonesian=\language33
-\l@interlingua=\language34
-\l@irish=\language35
-\l@italian=\language36
-\l@kannada=\language37
-\l@kurmanji=\language38
-\l@latin=\language39
-\l@latvian=\language40
-\l@lithuanian=\language41
-\l@liturgicallatin=\language42
-\l@macedonian=\language43
-\l@malayalam=\language44
-\l@marathi=\language45
-\l@mongolian=\language46
-\l@mongolianlmc=\language47
-\l@monogreek=\language48
-\l@ngerman=\language49
-\l@nynorsk=\language50
-\l@occitan=\language51
-\l@oriya=\language52
-\l@pali=\language53
-\l@panjabi=\language54
-\l@piedmontese=\language55
-\l@polish=\language56
-\l@portuguese=\language57
-\l@romanian=\language58
-\l@romansh=\language59
-\l@russian=\language60
-\l@sanskrit=\language61
-\l@serbian=\language62
-\l@serbianc=\language63
-\l@slovak=\language64
-\l@slovenian=\language65
-\l@spanish=\language66
-\l@swedish=\language67
-\l@swissgerman=\language68
-\l@tamil=\language69
-\l@telugu=\language70
-\l@thai=\language71
-\l@turkish=\language72
-\l@turkmen=\language73
-\l@ukenglish=\language74
-\l@ukrainian=\language75
-\l@uppersorbian=\language76
-\l@usenglishmax=\language77
-\l@welsh=\language78
-\babelcatcodetablenum=\catcodetable12
-\bbl@pattcodes=\catcodetable13
+\Gin@req@height=\dimen121
+\Gin@req@width=\dimen122
 )
-\babel@savecnt=\count195
-\U@D=\dimen155
-\l@babelnohyphens=\language79
+("C:/Program Files/MiKTeX 2.9/tex/generic/babel/babel.sty"
+Package: babel 2019/09/27 3.34 The Babel package
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
-\bbl@attr@locale=\attribute4
-))
+("C:/Program Files/MiKTeX 2.9/tex/generic/babel/switch.def"
+File: switch.def 2019/09/27 3.34 Babel switching mechanism
+)
+("C:/Program Files/MiKTeX 2.9/tex/generic/babel/luababel.def"
+\l@afrikaans=\language2
+Package babel Info: Non-standard hyphenation setup on input line 114.
+\l@ancientgreek=\language3
+\l@arabic=\language4
+\l@armenian=\language5
+\l@assamese=\language6
+\l@basque=\language7
+\l@belarusian=\language8
+\l@bengali=\language9
+\l@bokmal=\language10
+\l@bulgarian=\language11
+\l@catalan=\language12
+\l@churchslavonic=\language13
+\l@classiclatin=\language14
+\l@coptic=\language15
+\l@croatian=\language16
+\l@czech=\language17
+\l@danish=\language18
+\l@dutch=\language19
+\l@esperanto=\language20
+\l@estonian=\language21
+\l@ethiopic=\language22
+\l@farsi=\language23
+\l@finnish=\language24
+\l@french=\language25
+\l@friulan=\language26
+\l@galician=\language27
+\l@georgian=\language28
+\l@german=\language29
+\l@german-x-2019-04-04=\language30
+\l@greek=\language31
+\l@gujarati=\language32
+\l@hindi=\language33
+\l@hungarian=\language34
+\l@ibycus=\language35
+\l@icelandic=\language36
+\l@indonesian=\language37
+\l@interlingua=\language38
+\l@irish=\language39
+\l@italian=\language40
+\l@kannada=\language41
+\l@kurmanji=\language42
+\l@latin=\language43
+\l@latvian=\language44
+\l@lithuanian=\language45
+\l@liturgicallatin=\language46
+\l@malayalam=\language47
+\l@marathi=\language48
+\l@mongolian=\language49
+\l@mongolianlmc=\language50
+\l@monogreek=\language51
+\l@ngerman=\language52
+\l@ngerman-x-2019-04-04=\language53
+\l@nynorsk=\language54
+\l@occitan=\language55
+\l@oriya=\language56
+\l@pali=\language57
+\l@panjabi=\language58
+\l@piedmontese=\language59
+\l@polish=\language60
+\l@portuguese=\language61
+\l@romanian=\language62
+\l@romansh=\language63
+\l@russian=\language64
+\l@sanskrit=\language65
+\l@serbian=\language66
+\l@serbianc=\language67
+\l@slovak=\language68
+\l@slovenian=\language69
+\l@spanish=\language70
+\l@swedish=\language71
+\l@swissgerman=\language72
+\l@tamil=\language73
+\l@telugu=\language74
+\l@thai=\language75
+\l@turkish=\language76
+\l@turkmen=\language77
+\l@ukenglish=\language78
+\l@ukrainian=\language79
+\l@uppersorbian=\language80
+\l@usenglishmax=\language81
+\l@welsh=\language82
+)
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/arabi/bblopts.cfg
+("C:/Program Files/MiKTeX 2.9/tex/latex/arabi/bblopts.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of 
 babel
 )
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/babel-english/english.l
-df
+("C:/Program Files/MiKTeX 2.9/tex/latex/babel-english/english.ldf"
 Language: english 2017/06/06 v3.3r English support from the babel system
-Package babel Info: \l@canadian = using hyphenrules for english
-(babel)             (\language0) on input line 102.
-Package babel Info: \l@australian = using hyphenrules for ukenglish
-(babel)             (\language74) on input line 105.
-Package babel Info: \l@newzealand = using hyphenrules for ukenglish
-(babel)             (\language74) on input line 108.
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/babel/babel.def"
+File: babel.def 2019/09/27 3.34 Babel common definitions
+\babel@savecnt=\count114
+\U@D=\dimen123
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/babel/luababel.def"
+\bbl@attr@locale=\attribute6
 ))
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
-tex.def
-File: l3backend-luatex.def 2020-09-01 L3 backend support: PDF output (LuaTeX)
-\l__kernel_color_stack_int=\count196
-\l__pdf_internal_box=\box47
-) (./Supplementary_Material.aux)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 
+25.
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/newtx/t1ntxtlf.fd"
+File: t1ntxtlf.fd 2015/01/17 v1.0 font definition file for T1/ntx/tlf
+)
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 12.0pt on input line 25.
+
+(./Supplementary_Material.aux)
 \openout1 = Supplementary_Material.aux
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 25.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 
 25.
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/omlntxmi.fd
+("C:/Program Files/MiKTeX 2.9/tex/latex/newtx/omlntxmi.fd"
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
 LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 25
-.
-
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
@@ -552,15 +616,23 @@ LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 25.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 2
 5.
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/untxexa.fd
+("C:/Program Files/MiKTeX 2.9/tex/latex/newtx/untxexa.fd"
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
+)
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 25
+.
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 25.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 
 25.
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/lmsntxsy.fd
+("C:/Program Files/MiKTeX 2.9/tex/latex/newtx/lmsntxsy.fd"
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
 LaTeX Font Info:    ... okay on input line 25.
@@ -568,7 +640,7 @@ LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 25.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line
  25.
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/lmxntxexx.fd
+("C:/Program Files/MiKTeX 2.9/tex/latex/newtx/lmxntxexx.fd"
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
 LaTeX Font Info:    ... okay on input line 25.
@@ -607,75 +679,76 @@ LaTeX Font Info:    ... okay on input line 25.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count197
-\c@mv@boldtabular=\count198
-
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
-ii
+\c@mv@tabular=\count115
+\c@mv@boldtabular=\count116
+("C:/Program Files/MiKTeX 2.9/tex/context/base/mkii/supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count199
-\scratchdimen=\dimen156
-\scratchbox=\box48
-\nofMPsegments=\count266
-\nofMParguments=\count267
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count268
-\MPscratchDim=\dimen157
-\MPnumerator=\count269
-\makeMPintoPDFobject=\count270
-\everyMPtoPDFconversion=\toks28
-)
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
-ase.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+\scratchcounter=\count117
+\scratchdimen=\dimen124
+\scratchbox=\box29
+\nofMPsegments=\count118
+\nofMParguments=\count119
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count120
+\MPscratchDim=\dimen125
+\MPnumerator=\count121
+\makeMPintoPDFobject=\count122
+\everyMPtoPDFconversion=\toks27
+) ("C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.s
-ty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefine
-keys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-))
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/kvsetkeys/kvsetkeys.s
-ty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-))
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds
-.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+("C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+)))
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/pdftexcmds.sty"
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO)
 
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks29
+\pdftexcmds@toks=\toks28
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
-5.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
+8.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG
 ,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
+(grfext)             \AppendGraphicsExtensions on input line 456.
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 17.28pt on input line 26.
+LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 17.28pt on input line 28.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 14.4pt on input line 31.
+LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 32.
 LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input line
  34.
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/ot1ntxtlf.fd
+("C:/Program Files/MiKTeX 2.9/tex/latex/newtx/ot1ntxtlf.fd"
 File: ot1ntxtlf.fd 2015/01/17 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
@@ -686,30 +759,30 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 7.9pt on input line 34.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 3
 4.
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/untxmia.fd
+("C:/Program Files/MiKTeX 2.9/tex/latex/newtx/untxmia.fd"
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 3
 4.
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/untxsym.fd
+("C:/Program Files/MiKTeX 2.9/tex/latex/newtx/untxsym.fd"
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 3
 4.
 
-(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/untxsyc.fd
+("C:/Program Files/MiKTeX 2.9/tex/latex/newtx/untxsyc.fd"
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
@@ -729,15 +802,15 @@ File: JAE_Logo.png Graphic file (type png)
 Package luatex.def Info: JAE_Logo.png  used on input line 53.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+Make it at least 32.80278pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
 
 [1
 
-{C:/Users/sebca/AppData/Local/MiKTeX/pdftex/config/pdftex.map}<./JAE_Logo.png>]
+{C:/Users/sport/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}<./JAE_Logo.pn
+g>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.8pt on input line 60.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
@@ -746,50 +819,28 @@ File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 71.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[2]
+ [2]
 File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 91.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[3]
+ [3]
 File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 106.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[4]
+ [4]
 Missing character: There is no ’ (U+2019) in font ntx-Regular-tlf-ot1!
 Missing character: There is no ’ (U+2019) in font ntx-Regular-tlf-ot1!
 Missing character: There is no ’ (U+2019) in font ntx-Regular-tlf-ot1!
 Missing character: There is no ’ (U+2019) in font ntx-Regular-tlf-ot1!
+LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <12> not available
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 127.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 127.
 LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 1
 29.
- (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/t1ntxtt.fd
+ ("C:/Program Files/MiKTeX 2.9/tex/latex/newtx/t1ntxtt.fd"
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
@@ -799,144 +850,57 @@ File: JAE_Logo.png Graphic file (type png)
 Package luatex.def Info: JAE_Logo.png  used on input line 135.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
 [5]
 File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 159.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[6]
+ [6]
 File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 197.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[7]
+ [7]
 File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 222.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[8]
+ [8]
 File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 246.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[9]
+ [9]
 File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 281.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[10]
+ [10]
 File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 305.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[11]
+ [11]
 File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 343.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[12]
+ [12]
 File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 369.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[13]
+ [13]
 File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 393.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[14]
+ [14]
 File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 419.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[15]
+ [15]
 <FigureS1.pdf, id=58, 867.24pt x 505.89pt>
 File: FigureS1.pdf Graphic file (type pdf)
 <use FigureS1.pdf>
@@ -946,40 +910,31 @@ File: JAE_Logo.png Graphic file (type png)
 <use JAE_Logo.png>
 Package luatex.def Info: JAE_Logo.png  used on input line 428.
 (luatex.def)             Requested size: 173.20894pt x 28.45274pt.
+ [16
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[16
-
-<./FigureS1.pdf>] (./Supplementary_Material.aux))
+<./FigureS1.pdf>]
+(./Supplementary_Material.aux))
 
 Here is how much of LuaTeX's memory you used:
- 8194 strings out of 481289
- 125171,460012 words of node,token memory allocated
- 1396 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 86 kern, 1 glyph, 171 attribute, 53 
-glue_spec, 87 attribute_list, 1 write nodes
-   avail lists: 1:1,2:219,3:311,4:16,5:248,6:30,7:1932,8:55,9:202,10:9,11:106
- 24806 multiletter control sequences out of 65536+200000
- 166 fonts using 12883859 bytes
- 40i,15n,50p,833b,522s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf.
-enc}{C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-t
-lf.enc}<C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/Ne
-wTXMI.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx
-/NewTXMI7.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/public/t
-xfonts/t1xtt.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/newtx/txexs.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/newtx/txmiaX.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/newtx/txsys.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/newtx/ztmb.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/newtx/ztmr.pfb>
-Output written on Supplementary_Material.pdf (16 pages, 274444 bytes).
+ 7438 strings out of 493864
+ 125171,184870 words of node,token memory allocated
+ 1382 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 86 kern, 1 glyph, 173 attribute, 49 
+glue_spec, 88 attribute_list, 1 write nodes
+   avail lists: 1:2,2:219,3:311,4:15,5:245,6:30,7:1942,8:55,9:202,10:9,11:107
+ 11494 multiletter control sequences out of 65536+200000
+ 151 fonts using 10027511 bytes
+ 43i,15n,50p,864b,515s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{C:/Program F
+iles/MiKTeX 2.9/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}<C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/newtx/NewTXMI.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/newtx/NewTXMI7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gy
+re/qtmb.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qtmr.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/newtx/txexs.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/newtx/txmiaX.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/newtx/txsys.pfb>
+Output written on Supplementary_Material.pdf (16 pages, 233380 bytes).
 
 PDF statistics: 97 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
