@@ -9,6 +9,7 @@
 \usepackage{newtxtext,newtxmath}
 \usepackage{graphicx}
 %\usepackage{lineno}
+\usepackage[labelfont=bf]{caption}
 \usepackage[english]{babel}
 
 \renewcommand\headrulewidth{0 pt}
@@ -64,22 +65,22 @@ This expression will depend on the pattern of temperature difference, $z(t)$. We
 When we substitute these expressions into the defining equation for $t^*$ above, $\epsilon$ appears twice: once in the upper limit of integration and once in the integrand. To emphasize these two occurrences, we write the left-hand side of the equation as a function of two variables, namely
 \stepcounter{equation}
 \begin{equation} \label{Iequation}
-    I(t^*(\epsilon),R(x+\epsilon x)) = \int _{t_0} ^{t^*(\epsilon)} R(x(t))+\epsilon z(t) \mathrm{d}t \tag*{Eq. S\theequation}
+    I(t^*(\epsilon),R(x+\epsilon x)) = \int _{t_0} ^{t^*(\epsilon)} R(x(t)+\epsilon z(t)) \mathrm{d}t. \tag*{Eq. S\theequation}
 \end{equation}
 When we differentiate the equation that defines the end time, $I(t^* ,R)=F$, with respect to $\epsilon$, we use the chain rule repeatedly and obtain
 \stepcounter{equation}
 \begin{equation} 
-    \frac{\mathrm{d}}{\mathrm{d}\epsilon}I(t^*(\epsilon),R(x+\epsilon x)) = \frac{\partial I}{\partial t^*} \frac{\mathrm{d}t^*}{\mathrm{d}\epsilon}+\frac{\partial I}{\partial R} \frac{\mathrm{d} R}{\mathrm{d} x} \frac{\mathrm{d}x}{\mathrm{d}\epsilon} = 0 \tag*{Eq. S\theequation}
+    \frac{\mathrm{d}}{\mathrm{d}\epsilon}I(t^*(\epsilon),R(x+\epsilon x)) = \frac{\partial I}{\partial t^*} \frac{\mathrm{d}t^*}{\mathrm{d}\epsilon}+\frac{\partial I}{\partial R} \frac{\mathrm{d} R}{\mathrm{d} x} \frac{\mathrm{d}x}{\mathrm{d}\epsilon} = 0. \tag*{Eq. S\theequation}
 \end{equation}
 The derivative of the integral in \ref{Iequation} with respect to the end time is simply the integrand evaluated at the end time. The derivative of the integral with respect to the integrand is the integral itself since this is linear. The derivative of the rate function with respect to $x$ is the usual derivative and the derivative of $x$ with respect to $\epsilon$ is $z$, by our definition above. Then we can solve the above equation for the quantity we are looking for and find
 \stepcounter{equation}
 \begin{equation} \label{dtdepsilon}
-    \frac{\mathrm{d}t^*}{\mathrm{d}\epsilon}=\frac{- \int _{t_0} ^{t^*} R'(x(t)) z(t) \tag*{Eq. S\theequation} \mathrm{d}t}{R(x(t^*))}
+    \frac{\mathrm{d}t^*}{\mathrm{d}\epsilon}=\frac{- \int _{t_0} ^{t^*} R'(x(t)) z(t) \mathrm{d}t}{R(x(t^*))}. \tag*{Eq. S\theequation}
 \end{equation}
 Hence, the end time has the linear approximation
 \stepcounter{equation}
 \begin{equation}
-    t^*(\epsilon) \approx t^*(0)+\epsilon \frac{\mathrm{d}t^*}{\mathrm{d}\epsilon}=t^*(0)+\epsilon \frac{- \int _{t_0} ^{t^*} R'(x(t)) z(t) \mathrm{d}t}{R(x(t^*))} \tag*{Eq. S\theequation}
+    t^*(\epsilon) \approx t^*(0)+\epsilon \frac{\mathrm{d}t^*}{\mathrm{d}\epsilon}=t^*(0)+\epsilon \frac{- \int _{t_0} ^{t^*} R'(x(t)) z(t) \mathrm{d}t}{R(x(t^*))}. \tag*{Eq. S\theequation}
 \end{equation}
 As expected, the pattern by which the temperature deviates, $z(t)$, appears in this formula. We look at two interesting special cases for this pattern. \par
 
@@ -87,7 +88,7 @@ As expected, the pattern by which the temperature deviates, $z(t)$, appears in t
 The first case is that the temperature change is constant throughout the period, independent of time. In that case, we can set $\epsilon z(t)=\Delta x$ to be the constant temperature difference. Then the function $z(t)$ drops out of the above integral and the end time is given by
 \stepcounter{equation}
 \begin{equation}\label{byconstant}
-    t^*(\epsilon) \approx t^*(0) - \Delta x \frac{- \int _{t_0} ^{t^*} R'(x(t)) \mathrm{d}t}{R(x(t^*))} \tag*{Eq. S\theequation}
+    t^*(\epsilon) \approx t^*(0) - \Delta x \frac{\int _{t_0} ^{t^*} R'(x(t)) \mathrm{d}t}{R(x(t^*))}. \tag*{Eq. S\theequation}
 \end{equation}
 Since $R'(x)>0$ and $R(x)>0$, the end time decreases if the temperature increases, i.e., the phenology advances. We knew this already from general consideration, but now we have an explicit expression for how much the advance is per degree increase. \par
 
@@ -107,22 +108,33 @@ The two formulas (\ref{byconstant} and \ref{byspell}) may seem different, but th
 \subsection*{Derivative of the rate function}
 \stepcounter{equation}
 \begin{equation}
-    R(x)=\frac{1}{1+exp(b(x-c))}, \tag*{Eq. S\theequation}
+    R(x)=\frac{1}{1+\mathrm{exp}(b(x-c))}, \tag*{Eq. S\theequation}
 \end{equation}
 we can explicitly calculate the derivative as
 \stepcounter{equation}
 \begin{equation}
-    R'(x)=\frac{-b exp(b(x-c))}{(1+exp(b(x-c)))^2}, \tag*{Eq. S\theequation}
+    R'(x)=\frac{-b \mathrm{exp}(b(x-c))}{(1+\mathrm{exp}(b(x-c)))^2}, \tag*{Eq. S\theequation}
 \end{equation}
 which is positive since $b$ is negative. To find the maximum of the derivative, we differentiate again and find
 \stepcounter{equation}
 \begin{equation}
-    R''(x) = \frac{-b^2 exp(b(x-c))(1-exp(b(x-c)))}{(1+exp(b(x-c)))^3} \tag*{Eq. S\theequation}
+    R''(x) = \frac{-b^2 \mathrm{exp}(b(x-c))(1-\mathrm{exp}(b(x-c)))}{(1+\mathrm{exp}(b(x-c)))^3} \tag*{Eq. S\theequation}
 \end{equation}
 The maximum of $R’$ occurs where $R’’ = 0$, which happens when $x = c$ (see Fig. 2).
 
+\clearpage
+\begin{figure}[ht]
+\begin{center}
+\renewcommand{\thefigure}{S\arabic{figure}}
+%\renewcommand\figurename{figure S}
+\setcounter{figure}{0}
+\includegraphics[width = 16 cm, keepaspectratio]{FigureS1}
+\caption{\doublespacing Effects of a constant temperature difference on species phenology. Black is the consumer (SBW), and grey is the resource (balsam fir). A constant temperature difference advances species phenology. Dotted is the predicted value (Eq. 3 used with the $R$ functions of SBW and balsam fir), dashed is the linear approximation from the model with simple time series.}
+\end{center}
+\end{figure}
+
 \section{Analysis of variance}
-Here are the full results of the analysis of variance done on emergence date, budburst date and mismatch across latitude, for past/present temperatures, and for the three RCP scenarios. There are $6$ sites ranged from site 1 (southern site: $44.5^{\circ}$ N) to site 6 (northern site: $49.5^{\circ}$ N) (see Fig. 4 and 6, and main text for details). Analysis were performed with R.
+Here, we present  the full results of the analysis of variance done on emergence date, budburst date and mismatch across latitude, for past/present temperatures, and for the three RCP scenarios. There are $6$ sites ranged from site 1 (southern site: $44.5^{\circ}$ N) to site 6 (northern site: $49.5^{\circ}$ N) (see Fig. 4 and 6, and main text for details). The analysis was performed with R.
 \subsection{Historical data}
 \subsubsection*{Emergence date}
 
@@ -416,13 +428,4 @@ Here are the full results of the analysis of variance done on emergence date, bu
 ## P value adjustment method: bonferroni
 \end{verbatim}
 
-\clearpage
-\begin{figure}[ht]
-\begin{center}
-\renewcommand{\thefigure}{S\arabic{figure}}
-\setcounter{figure}{0}
-\includegraphics[width = 16 cm, keepaspectratio]{FigureS1}
-\caption{\doublespacing Effects of a constant temperature difference on species phenology. Black is the consumer (SBW), and grey is the resource (balsam fir). A constant temperature difference advances species phenology. Dotted is the predicted value (Eq. 3 used with the $R$ functions of SBW and balsam fir), dashed is the linear approximation from the model with simple time series.}
-\end{center}
-\end{figure}
 \end{document}
