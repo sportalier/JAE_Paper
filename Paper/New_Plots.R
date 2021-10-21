@@ -1225,3 +1225,146 @@ hist(mod2$residuals,nclass = 20)
 TukeyHSD(mod2)
 pairwise.t.test(past$Budburst,past$Site,p.adjust.method = 'bonferroni')
 
+#### graphical abstract ####
+library(lattice)
+library(latticeExtra)
+
+x = seq(1,1500)
+sigma = 70
+
+mu1 = 300
+fx11 = 1/(sigma*sqrt(2*pi))*exp(-0.5*((x-mu1)/sigma)^2)
+fx1i = which(fx11>1e-5)
+mu2 = 200
+fx22 = 1/(sigma*sqrt(2*pi))*exp(-0.5*((x-mu2)/sigma)^2)
+fx2i = which(fx22>1e-5)
+
+mu3 = 1200
+fx33 = 1/(sigma*sqrt(2*pi))*exp(-0.5*((x-mu3)/sigma)^2)
+fx3i = which(fx33>1e-5)
+
+mu4 = 1000
+fx44 = 1/(sigma*sqrt(2*pi))*exp(-0.5*((x-mu4)/sigma)^2)
+fx4i = which(fx44>1e-5)
+
+mypanel2 = function(x,y,...){
+  panel.xyplot(x,y,...)
+  panel.text(150,7e-3,"Resource",col='blue',cex=2)
+  panel.text(350,7e-3,"Consumer",col='red',cex=2)
+  panel.text(1000,7e-3,"Resource",col='blue',cex=2)
+  panel.text(1250,7e-3,"Consumer",col='red',cex=2)
+  
+}
+pp44 = xyplot(fx11[fx1i]~fx1i,type='l',lwd=3,col='red',xlim=c(0,1400),ylim=c(0,0.008),
+     xlab='Time',ylab='Abundance',cex.lab=2,
+     panel = mypanel2,
+     par.settings=list(axis.text=list(cex=1.5),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                       axis.components=list(top=list(tck=0),right=list(tck=0),left=list(tck=0),bottom=list(tck=0))),
+     scales=list(x=list(draw=F),y=list(draw=F))
+     )
+pp45 = xyplot(fx22[fx2i]~fx2i,type='l',col='blue',lwd=3)
+pp46 = xyplot(fx33[fx3i]~fx3i,type='l',col='red',lwd=3)
+pp47 = xyplot(fx44[fx4i]~fx4i,type='l',col='blue',lwd=3)
+p2 = pp44+as.layer(pp45)+as.layer(pp46)+as.layer(pp47)
+
+
+setwd("~/Budworm/Manuscript/JAE_Paper/Paper")
+png('Graphabstract1.png', width = 900, height = 600)
+print(p2)
+dev.off()
+
+# setwd("~/Budworm/Manuscript/JAE_Paper/Paper")
+# png('Graphabstract1.png', width = 900, height = 600)
+# par(mar=c(5,5,4,2))
+# plot(fx11[fx1i]~fx1i,type='l',lwd=3,col='red',xlim=c(0,1400),ylim=c(0,0.008),
+#      xlab='Time',ylab='Abundance',axes=F,cex.lab=2)
+# lines(fx22[fx2i]~fx2i,col='blue',lwd=3)
+# lines(fx33[fx3i]~fx3i,col='red',lwd=3)
+# lines(fx44[fx4i]~fx4i,col='blue',lwd=3)
+# box()
+# text(150,7e-3,"Resource",col='blue',cex=1.5)
+# text(350,7e-3,"Consumer",col='red',cex=1.5)
+# text(1000,7e-3,"Resource",col='blue',cex=1.5)
+# text(1250,7e-3,"Consumer",col='red',cex=1.5)
+# dev.off()
+
+t1 = 87;  # starting date for heat accumulation
+bf = -1.32;
+cf = 7.14;
+Fb = 18.6;
+
+# spruce budworm
+beta1 = 0.194;
+beta2 = 3.0;
+beta3 = 5.84;
+beta4 = 0.034;
+tb = 2.5;
+tm = 35;
+t1s = 31+28
+
+xm1 = seq(-30,35,length.out = 1000);
+
+# SBW
+RM1primesbw = beta1*((beta3*exp(beta2-(beta3*(xm1-tb))/(tm-tb)))/((tm-tb)*(exp(beta2-(beta3*(xm1-tb))/(tm-tb))+1)^2)-exp(((xm1-tb)/(tm-tb)-1)/beta4)/(beta4*(tm-tb)))
+
+# TREE
+RM1primetree2 = -bf*exp(bf*(xm1-cf))/(1+exp(bf*(xm1-cf)))^2;
+RM1primetree = RM1primetree2/30
+
+sbwmaxindex = which(RM1primesbw==max(RM1primesbw))
+treemaxindex = which(RM1primetree==max(RM1primetree))
+sbwmax = xm1[sbwmaxindex]
+treemax = xm1[treemaxindex]
+
+# temperatures
+MeanTemp = 6.9;  # Fredericton mean temp
+AmpliTemp = 6.5; # Fredericton amplitude temp
+phase = 200;  # Ottawa temperature phase
+dt = 5; # dt in 1-hour intervals
+t = seq(1,365,by=dt);  # days in a year
+
+xmean1 = MeanTemp + AmpliTemp * cos(2*pi*(t-phase)/365);
+
+xmean2 = (xmean1[1:41]/1000)-0.0006
+
+# polygon
+x1 = treemax-0.1
+x2 = treemax+0.8
+y11 = 0.0039
+y12 = 0.0044
+y21 = 0.007
+y22 = 0.0075
+
+labs = c(expression(paste("c"[1]*" = t"[s])),expression(paste("c"[2])))
+
+mypanel1 = function(x,y,...){
+  panel.xyplot(x,y,...)
+  #panel.abline(v = sbwmax, col='black',lty=2,lwd=3)
+  #panel.abline(v = treemax, col='grey60',lty=2,lwd=3)
+  #panel.text((x1+0.5),0.0077,expression(paste(Delta *'t')),cex=1.2)
+  #panel.text((x1-0.5),0.0055,expression(paste(Delta *'x')),cex=1.2)
+  #panel.text(24,0.011,'Temperature',cex=1.2)
+  #panel.text(4,0.008,'Warm spell',cex=1.2,col='grey70')
+  #panel.text(5.5,0.01,expression(paste("R'"[b]*'(x)')),cex=1.2,col='grey60')
+  #panel.text(22,0.009,expression(paste("R'"[e]*'(x)')),cex=1.2,col='black')
+  #panel.polygon(x=c(x1,x2,x2,x1),y=c(y11,y12,y22,y21),col='grey80',lty=0)
+  #panel.arrows(x0=4,x1=(cf-0.1),y0=0.0075,y1=0.006,length = 0,col='grey70',lwd=3)
+  #panel.text(0.5,0.0005,'B',cex = 1.5)
+}
+p11 = xyplot(RM1primetree~xm1,type='l',col='blue',lwd=3,
+             xlab='Time',ylab="Sensitivity",xlim=c(0,27),ylim=c(0,0.012),
+             panel = mypanel1,
+             par.settings=list(axis.text=list(cex=1.5),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                               axis.components=list(top=list(tck=0),right=list(tck=0),left=list(tck=0),bottom=list(tck=0))),
+             scales=list(x=list(draw=F),y=list(draw=F))
+)
+p12 = xyplot(RM1primesbw~xm1,lwd=3,type='l',col='red')
+#p13 = xyplot(xmean2~seq(-10,30),type='l',col = 'black',lty = 3,lwd=2)
+
+p1 = p11+as.layer(p12)#+as.layer(p13)
+
+setwd("~/Budworm/Manuscript/JAE_Paper/Paper")
+png('Graphabstract2.png', width = 900, height = 600)
+print(p1)
+dev.off()
+
