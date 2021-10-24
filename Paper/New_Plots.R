@@ -683,6 +683,53 @@ d3 = xyplot(ft~seq(1,length(ft)),type='l',lwd=2, col = 'black')
 d4 = xyplot(ft2~seq(1,length(ft2)),type='l',lwd=2,lty=2, col = 'black')
 dtot = d1+as.layer(d2)+as.layer(d3)+as.layer(d4)
 
+# presentation
+mypanel4 = function(x,y, ...){
+  panel.xyplot(x,y, ...)
+  panel.text(170,140, expression(paste('F'[e])),cex = 1.4)
+  panel.text(170,100, expression(paste('F'[b])),cex = 1.4)
+  panel.abline(v = vot1x,lty = 2, col='pink')
+  panel.abline(v = vot2x,lty = 2, col = 'pink')
+  panel.abline(v = vot3x ,lty = 2, col = 'lightblue')
+  panel.abline(v = vot4x ,lty = 2, col = 'lightblue')
+  panel.abline(h = 130, lwd = 2, col = 'grey70',lty=3)
+  panel.abline(h = 90, lwd = 2, col = 'grey70',lty=3)
+  #panel.text(480,155,'Within species shift',cex = 1.1)
+  panel.text(485,138,'shift',cex = 1.1)
+  panel.text(520,98,'shift',cex = 1.1)
+  panel.text(550,117,'Mismatch',cex = 1.1,col='blue')
+  panel.text(445,117,'Mismatch',cex = 1.1,col='red')
+  #panel.text(540,45,'between',cex = 1.1,col='grey50')
+  #panel.text(540,35,'species',cex = 1.1,col='grey50')
+  panel.text(160,15,'D', cex = 1.4)
+  panel.text(vot1x,10,expression(paste('t'[e2]^'*')),cex = 1.4,col='red')
+  panel.text(vot2x,10,expression(paste('t'[b2]^'*')),cex = 1.4,col='red')
+  panel.text(vot3x,10,expression(paste('t'[e1]^'*')),cex = 1.4,col='blue')
+  panel.text(vot4x,10,expression(paste('t'[b1]^'*')),cex = 1.4,col='blue')
+  panel.arrows(x0 = vot1x, x1 = vot3x, y0 = 130, y1 = 130, lwd = 2, col = 'black',angle = 25, code = 3, length = 0.1)
+  panel.arrows(x0 = (vot2x+2), x1 = vot2x, y0 = 90, y1 = 90, lwd = 2, col = 'black',angle = 25, code = 2, length = 0.1)
+  panel.arrows(x0 = (vot4x-2), x1 = vot4x, y0 = 90, y1 = 90, lwd = 2, col = 'black',angle = 25, code = 2, length = 0.1)
+  panel.segments(x0 = (vot4x-2), x1 = (vot2x+2), y0 = 90, y1 = 90, lwd =2, lty = 2, col = 'black')
+  panel.arrows(x0 = vot3x, x1 = vot4x, y0 = 110, y1 = 110, lwd = 2, col = 'blue',angle = 25, code = 3, length = 0.1)
+  panel.arrows(x0 = vot1x, x1 = vot2x, y0 = 110, y1 = 110, lwd = 2, col = 'red',angle = 25, code = 3, length = 0.1)
+}
+d1 = xyplot(ft3~seq(1,length(ft3)),type = 'l',ylim=c(-1,160),xlim=c(150,600),lwd = 2, col = 'blue',
+            ylab = 'Accumulated quantity', xlab = 'Time (t)',
+            panel = mypanel4,
+            par.settings=list(axis.text=list(cex=2),par.xlab.text=list(cex=1.9),par.ylab.text=list(cex=1.9),
+                              axis.components=list(top=list(tck=0),right=list(tck=0),left=list(tck=0),bottom=list(tck=0))),
+            #scales=list(x=list(draw=F),y=list(draw=F))
+            #scales=list(x=list(at=c(vot1x,vot2x,vot3x,vot4x),cex = 1.4,
+            #                   labels=c(expression(paste('t'[e2]^'*')),expression(paste('t'[b2]^'*')),
+            #                                                          expression(paste('t'[e1]^'*')),expression(paste('t'[b1]^'*')))),
+            #            y=list(draw=F))
+            scales=list(x=list(draw=F),y=list(draw=F))
+)
+d2 = xyplot(ft4~seq(1,length(ft4)),type='l',lwd=2,lty=2,col='blue')
+d3 = xyplot(ft~seq(1,length(ft)),type='l',lwd=2, col = 'red')
+d4 = xyplot(ft2~seq(1,length(ft2)),type='l',lwd=2,lty=2, col = 'red')
+dtot = d1+as.layer(d2)+as.layer(d3)+as.layer(d4)
+
 # png('figure_1D.png',width = 780,height = 480)
 # print(dtot)
 # dev.off()
