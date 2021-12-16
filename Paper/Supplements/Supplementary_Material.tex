@@ -11,17 +11,20 @@
 %\usepackage{lineno}
 \usepackage[labelfont=bf]{caption}
 \usepackage[english]{babel}
+\usepackage[round]{natbib}
 
 \renewcommand\headrulewidth{0 pt}
 \pagestyle{fancy}
 \fancyhf{}
-\rfoot{\thepage}
-\lfoot{A temperature-driven model of phenological mismatch \\ Portalier, Candau \& Lutscher}
-\lhead{\includegraphics[height=1 cm, keepaspectratio]{JAE_Logo}}
+%\rfoot{\thepage}
+%\lfoot{A temperature-driven model of phenological mismatch \\ Portalier, Candau \& Lutscher}
+%\lhead{\includegraphics[height=1 cm, keepaspectratio]{JAE_Logo}}
 
 \setstretch{2}
 
 \geometry{tmargin=2.5 cm, bmargin=3 cm, lmargin=2.6 cm, rmargin=2.6 cm}
+
+\bibliographystyle{besjournals}
 
 \begin{document}
 \begin{Large}
@@ -122,7 +125,15 @@ which is positive since $b$ is negative. To find the maximum of the derivative, 
 \end{equation}
 The maximum of $R’$ occurs where $R’’ = 0$, which happens when $x = c$ (see Fig. 2).
 
-\clearpage
+\subsection*{Illustration with a simplified time series}
+In reality, the periods of high sensitivity of the two species may overlap more or less, and the rate functions at emergence time (the terms in the denominators in Eqs 3 and 4, main text) could differ significantly. As a result, the effect of temperature increases depends on details of each scenario. We illustrate this dependence using a simplified time series of daily mean temperatures as modelled by
+\stepcounter{equation}
+\begin{equation}
+	x_i (t)=6.9+15 \; \text{cos} \left( \frac{2 \pi (t-200)}{365} \right)	\tag*{Eq. S\theequation}
+\end{equation}
+where the mean, amplitude and offset have been chosen to match historical averages in Fredericton (NB, Canada).  %We denote the end times of the consumer for the time series $x_i(t)$ by $t_{e,i}^*$ (emergence time) and of the resource by $t_{b,i}^*$ (budburst time).
+
+%\clearpage
 \begin{figure}[ht]
 \begin{center}
 \renewcommand{\thefigure}{S\arabic{figure}}
@@ -133,6 +144,56 @@ The maximum of $R’$ occurs where $R’’ = 0$, which happens when $x = c$ (se
 \end{center}
 \end{figure}
 
+\clearpage
+\section{Phenological models of balsam fir and spruce budworm}
+\subsection{Phenological model of balsam fir's budburst}
+We use the \textit{Uniforc} model of Chuine (2000) to model balsam fir's budburst phenology. \textit{Uniforc} predicts bud development as a function of temperature in the second stage of seasonal resting (i.e., ecodormancy). The heat accumulation rate writes
+\stepcounter{equation}
+\begin{equation}
+   R(x)=\frac{1}{1+\text{exp}(b-(x-c))}.  \tag*{Eq. S\theequation}
+\end{equation}
+Accumulation starts some time after January 1st (Desbiens, 2007), when trees have accumulated enough cold to end bud dormancy. Budburst occurs when accumulation reaches a threshold $F^*$. 
+\par
+We fitted the \textit{Uniforc} model to budburst phenology data collected from 1980 to 1996 in Quebec and New Brunswick (Desbiens, 2007; R\'egni\`ere pers. comm., 2020) (see Fig. S2). Each year, bud development was observed in different sites during the growing season at time intervals ranging from two days to two weeks. Budburst occurs when buds develop from class I to II according to the class scheme developed by \cite{Dorais1982}. The budburst date was defined as the date when $50 \%$ of the buds in the site have reached stage II. We obtained temperature data at each site for each year using BioSIM. We estimated parameter values of the \textit{Uniforc} model using simulated annealing in order to predict budburst date according to temperatures during development period.
+\par
+Fitting the \textit{Uniforc} model to phenological data resulted in the parameter values: $b = -1.32$, $c = 7.14 \; ^\circ$C, $t_0 = 87$ (March 28th), and $F^* = 18.6$. 
+To evaluate model's goodness of fit, we first computed the root mean squared error (RMSE), which is the standard deviation of the residuals. Then, we tested the slope and intercept of the observed versus predicted data of the fitted model. A slope that does not significantly differ from 1, and an intercept that does not significantly differ from 0 mean that the model is unbiased \citep{Pineiro2008}. Since the same dataset was used to fit and to test the model, we performed a leave-one-out cross validation. 
+\par
+We found RMSE $= 12.6$. The slope of the regression of the observed versus predicted data does not significantly differ from 1 ($p = 0.42$), and the intercept does not significantly differ from 0 ($p = 0.38$) (Fig. S3A). Thus, the model is considered unbiased. Moreover, the residuals of this fitting follow a Normal distribution centred on 0 (Fig. S3B). There is no obvious pattern for the residuals across latitude in the range of our study (Fig. S3C). 
+\par
+
+\subsection{Sensitivity analysis of the balsam fir and spruce budworm's models}
+We performed sensitivity analysis on both models using partial rank correlation coefficients \citep{Wu2013}. The budworm model is sensitive to most parameters (Fig. S4A). The only exception is $x_m$ (the maximal temperature) since very high temperatures are rare during late winter and spring, and to a certain extent $\beta _1$. Increasing parameters $\beta _2$, $\beta _4$, and $x_b$ (minimal temperature) delays emergence, while increasing $\beta _3$ strongly advances phenology. The tree model is most sensitive to parameters $t_0$ (when the tree starts accumulating heat) and $b$ (which drives the speed of accumulation). An increase in $t_0$ postpones phenology, while an increase in $b$ advances it (Fig. S4B).
+
+\begin{figure}[ht]
+\begin{center}
+\renewcommand{\thefigure}{S\arabic{figure}}
+%\setcounter{figure}{0}
+\includegraphics[width = 16 cm, keepaspectratio]{map_fitting}
+\caption{\doublespacing Location of the sample sites where data on phenology of balsam fir's buds was collected.}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\renewcommand{\thefigure}{S\arabic{figure}}
+%\setcounter{figure}{0}
+\includegraphics[width = 16 cm, keepaspectratio]{Fitting_Plots}
+\caption{\doublespacing Evaluation of the goodness of fit of the balsam fir model. (A) Regression of observed versus predicted data. The slope does not significantly differ from 1 and the intercept from 0 (black line). (B) Residuals follow a Normal distribution centered on 0. (C) No obvious latitudinal patterns can be found on the residuals within the range of latitudes that is used throughout the rest of the study.}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\renewcommand{\thefigure}{S\arabic{figure}}
+%\setcounter{figure}{0}
+\includegraphics[width = 14 cm, keepaspectratio]{Sensitivity}
+\caption{\doublespacing Partial Rank Correlation Coefficient (PRCC) of the budworm and tree's models. (A) The SBW model is sensitive to most parameters especially $\beta _2$, $\beta _4$ and $x_b$ that delay emergence, and $\beta _3$ that advances phenology. (B) The tree model is mostly sensitive to $b_f$  that hastens budburst, and $t_0$ that delays budburst.}
+\end{center}
+\end{figure}
+
+\clearpage
+
 \section{Analysis of variance}
 Here, we present  the full results of the analysis of variance done on emergence date, budburst date and mismatch across latitude, for past/present temperatures, and for the three RCP scenarios. There are $6$ sites ranged from site 1 (southern site: $44.5^{\circ}$ N) to site 6 (northern site: $49.5^{\circ}$ N) (see Fig. 4 and 6, and main text for details). The analysis was performed with R.
 \subsection{Historical data}
@@ -140,7 +201,7 @@ Here, we present  the full results of the analysis of variance done on emergence
 
 \begin{verbatim}
 ##              Df Sum Sq Mean Sq F value  Pr(>F)    
-## Site          5   3374   674.8   17.89 3.2e-13 ***
+## Latitude          5   3374   674.8   17.89 3.2e-13 ***
 ## Residuals   120   4527    37.7                    
 ## 
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -150,12 +211,12 @@ Here, we present  the full results of the analysis of variance done on emergence
 ## 
 ##  Pairwise comparisons using t tests with pooled SD 
 ## 
-##       Site1   Site2   Site3   Site4   Site5  
-## Site2 0.20440   -       -       -       -      
-## Site3 1.00000 0.64190   -       -       -      
-## Site4 0.00574 1.00000 0.02647   -       -      
-## Site5 2.0e-09 0.00021 2.0e-08 0.01493   -      
-## Site6 1.5e-08 0.00102 1.4e-07 0.05283 1.00000
+##        44.5N  45.5N  46.5N  47.5N  48.5N
+## 45.5N 0.20440   -       -       -       -      
+## 46.5N 1.00000 0.64190   -       -       -      
+## 47.5N 0.00574 1.00000 0.02647   -       -      
+## 48.5N 2.0e-09 0.00021 2.0e-08 0.01493   -      
+## 49.5N 1.5e-08 0.00102 1.4e-07 0.05283 1.00000
 ## 
 ## P value adjustment method: bonferroni
 \end{verbatim}
@@ -164,7 +225,7 @@ Here, we present  the full results of the analysis of variance done on emergence
 
 \begin{verbatim}
 ##              Df Sum Sq Mean Sq F value   Pr(>F)    
-## Site          5   1332  266.43   21.72 1.94e-15 ***
+## Latitude          5   1332  266.43   21.72 1.94e-15 ***
 ## Residuals   120   1472   12.26                     
 ## 
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -174,12 +235,12 @@ Here, we present  the full results of the analysis of variance done on emergence
 ## 
 ##  Pairwise comparisons using t tests with pooled SD 
 ##  
-##       Site1   Site2   Site3   Site4   Site5  
-## Site2 0.21247   -       -       -       -      
-## Site3 1.00000 1.00000   -       -       -      
-## Site4 0.00062 1.00000 0.01185   -       -      
-## Site5 6.5e-09 0.00050 3.5e-07 0.18502   -      
-## Site6 3.1e-12 8.8e-07 2.2e-10 0.00155 1.00000
+##        44.5N  45.5N  46.5N  47.5N  48.5N 
+## 45.5N 0.21247   -       -       -       -      
+## 46.5N 1.00000 1.00000   -       -       -      
+## 47.5N 0.00062 1.00000 0.01185   -       -      
+## 48.5N 6.5e-09 0.00050 3.5e-07 0.18502   -      
+## 49.5N 3.1e-12 8.8e-07 2.2e-10 0.00155 1.00000
 ## 
 ## P value adjustment method: bonferroni
 \end{verbatim}
@@ -188,7 +249,7 @@ Here, we present  the full results of the analysis of variance done on emergence
 
 \begin{verbatim}
 ##              Df Sum Sq Mean Sq F value  Pr(>F)    
-## Site          5  545.7  109.13   11.08 8.7e-09 ***
+## Latitude          5  545.7  109.13   11.08 8.7e-09 ***
 ## Residuals   120 1182.1    9.85                    
 ## 
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -198,12 +259,12 @@ Here, we present  the full results of the analysis of variance done on emergence
 ## 
 ##  Pairwise comparisons using t tests with pooled SD 
 ## 
-##       Site1   Site2  Site3   Site4  Site5 
-## Site2 0.5382    -      -       -      -     
-## Site3 1.0000  0.5175   -       -      -     
-## Site4 0.2684  1.0000 0.2572    -      -     
-## Site5 1.4e-07 0.0014 1.3e-07 0.0038   -     
-## Site6 0.0042  1.0000 0.0039  1.0000 0.2517
+##        44.5N  45.5N  46.5N  47.5N  48.5N
+## 45.5N 0.5382    -      -       -      -     
+## 46.5N 1.0000  0.5175   -       -      -     
+## 47.5N 0.2684  1.0000 0.2572    -      -     
+## 48.5N 1.4e-07 0.0014 1.3e-07 0.0038   -     
+## 49.5N 0.0042  1.0000 0.0039  1.0000 0.2517
 ## 
 ## P value adjustment method: bonferroni
 \end{verbatim}
@@ -213,7 +274,7 @@ Here, we present  the full results of the analysis of variance done on emergence
 
 \begin{verbatim}
 ##               Df Sum Sq Mean Sq F value Pr(>F)    
-## Site     5 305237   61047    3334 <2e-16 ***
+## Latitude     5 305237   61047    3334 <2e-16 ***
 ## Residuals   7194 131707      18                   
 ## 
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -223,12 +284,12 @@ Here, we present  the full results of the analysis of variance done on emergence
 ## 
 ##  Pairwise comparisons using t tests with pooled SD 
 ##  
-##       Site1  Site2  Site3  Site4  Site5 
-## Site2 <2e-16   -      -      -      -     
-## Site3 <2e-16 <2e-16   -      -      -     
-## Site4 <2e-16 <2e-16 <2e-16   -      -     
-## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -     
-## Site6 <2e-16 <2e-16 <2e-16 <2e-16 <2e-16
+##        44.5N  45.5N  46.5N  47.5N  48.5N
+## 45.5N <2e-16   -      -      -      -     
+## 46.5N <2e-16 <2e-16   -      -      -     
+## 47.5N <2e-16 <2e-16 <2e-16   -      -     
+## 48.5N <2e-16 <2e-16 <2e-16 <2e-16   -     
+## 49.5N <2e-16 <2e-16 <2e-16 <2e-16 <2e-16
 ## 
 ## P value adjustment method: bonferroni
 \end{verbatim}
@@ -237,7 +298,7 @@ Here, we present  the full results of the analysis of variance done on emergence
 
 \begin{verbatim}
 ##               Df Sum Sq Mean Sq F value Pr(>F)    
-## Site     5  94260   18852    2896 <2e-16 ***
+## Latitude     5  94260   18852    2896 <2e-16 ***
 ## Residuals   7194  46827       7                   
 ## 
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -247,12 +308,12 @@ Here, we present  the full results of the analysis of variance done on emergence
 ## 
 ##  Pairwise comparisons using t tests with pooled SD 
 ## 
-##       Site1  Site2  Site3  Site4  Site5
-## Site2 <2e-16   -      -      -      -    
-## Site3 <2e-16 <2e-16   -      -      -    
-## Site4 <2e-16 <2e-16 <2e-16   -      -    
-## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -    
-## Site6 <2e-16 <2e-16 <2e-16 <2e-16 1    
+##        44.5N  45.5N  46.5N  47.5N  48.5N
+## 45.5N <2e-16   -      -      -      -    
+## 46.5N <2e-16 <2e-16   -      -      -    
+## 47.5N <2e-16 <2e-16 <2e-16   -      -    
+## 48.5N <2e-16 <2e-16 <2e-16 <2e-16   -    
+## 49.5N <2e-16 <2e-16 <2e-16 <2e-16 1    
 ## 
 ## P value adjustment method: bonferroni
 \end{verbatim}
@@ -261,7 +322,7 @@ Here, we present  the full results of the analysis of variance done on emergence
 
 \begin{verbatim}
 ##               Df Sum Sq Mean Sq F value Pr(>F)    
-## Site     5  66174   13235    2316 <2e-16 ***
+## Latitude     5  66174   13235    2316 <2e-16 ***
 ## Residuals   7194  41116       6                   
 ## 
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -271,12 +332,12 @@ Here, we present  the full results of the analysis of variance done on emergence
 ## 
 ##  Pairwise comparisons using t tests with pooled SD 
 ##  
-##       Site1  Site2  Site3  Site4  Site5 
-## Site2 <2e-16   -      -      -      -     
-## Site3 <2e-16 <2e-16   -      -      -     
-## Site4 <2e-16 <2e-16 <2e-16   -      -     
-## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -     
-## Site6 <2e-16 <2e-16 <2e-16 <2e-16 <2e-16
+##        44.5N  45.5N  46.5N  47.5N  48.5N
+## 45.5N <2e-16   -      -      -      -     
+## 46.5N <2e-16 <2e-16   -      -      -     
+## 47.5N <2e-16 <2e-16 <2e-16   -      -     
+## 48.5N <2e-16 <2e-16 <2e-16 <2e-16   -     
+## 49.5N <2e-16 <2e-16 <2e-16 <2e-16 <2e-16
 ## 
 ## P value adjustment method: bonferroni
 \end{verbatim}
@@ -286,7 +347,7 @@ Here, we present  the full results of the analysis of variance done on emergence
 
 \begin{verbatim}
 ##               Df Sum Sq Mean Sq F value Pr(>F)    
-## Site     5 139304   27861    1045 <2e-16 ***
+## Latitude     5 139304   27861    1045 <2e-16 ***
 ## Residuals   7194 191768      27                   
 ## 
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -296,12 +357,12 @@ Here, we present  the full results of the analysis of variance done on emergence
 ## 
 ##  Pairwise comparisons using t tests with pooled SD 
 ##  
-##       Site1  Site2  Site3  Site4  Site5
-## Site2 <2e-16   -      -      -      -    
-## Site3 <2e-16 <2e-16   -      -      -    
-## Site4 <2e-16 1.000  <2e-16   -      -    
-## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -    
-## Site6 <2e-16 <2e-16 <2e-16 <2e-16 0.006
+##        44.5N  45.5N  46.5N  47.5N  48.5N
+## 45.5N <2e-16   -      -      -      -    
+## 46.5N <2e-16 <2e-16   -      -      -    
+## 47.5N <2e-16 1.000  <2e-16   -      -    
+## 48.5N <2e-16 <2e-16 <2e-16 <2e-16   -    
+## 49.5N <2e-16 <2e-16 <2e-16 <2e-16 0.006
 ## 
 ## P value adjustment method: bonferroni
 \end{verbatim}
@@ -310,7 +371,7 @@ Here, we present  the full results of the analysis of variance done on emergence
 
 \begin{verbatim}
 ##               Df Sum Sq Mean Sq F value Pr(>F)    
-## Site     5  51477   10295    1046 <2e-16 ***
+## Latitude     5  51477   10295    1046 <2e-16 ***
 ## Residuals   7194  70813      10                   
 ## 
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -320,12 +381,12 @@ Here, we present  the full results of the analysis of variance done on emergence
 ## 
 ##  Pairwise comparisons using t tests with pooled SD 
 ## 
-##       Site1  Site2  Site3  Site4  Site5 
-## Site2 <2e-16   -      -      -      -     
-## Site3 <2e-16 <2e-16   -      -      -     
-## Site4 <2e-16 0.62   <2e-16   -      -     
-## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -     
-## Site6 <2e-16 <2e-16 <2e-16 <2e-16 <2e-16
+##        44.5N  45.5N  46.5N  47.5N  48.5N 
+## 45.5N <2e-16   -      -      -      -     
+## 46.5N <2e-16 <2e-16   -      -      -     
+## 47.5N <2e-16 0.62   <2e-16   -      -     
+## 48.5N <2e-16 <2e-16 <2e-16 <2e-16   -     
+## 49.5N <2e-16 <2e-16 <2e-16 <2e-16 <2e-16
 ## 
 ## P value adjustment method: bonferroni
 \end{verbatim}
@@ -333,8 +394,8 @@ Here, we present  the full results of the analysis of variance done on emergence
 \subsubsection*{Mismatch}
 
 \begin{verbatim}
-##               Df Sum Sq Mean Sq F value Pr(>F)    
-## Site     5  23457    4691   651.4 <2e-16 ***
+##              Df Sum Sq Mean Sq F value Pr(>F)    
+## Latitude     5  23457    4691   651.4 <2e-16 ***
 ## Residuals   7194  51815       7                   
 ## 
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -344,12 +405,12 @@ Here, we present  the full results of the analysis of variance done on emergence
 ## 
 ##  Pairwise comparisons using t tests with pooled SD 
 ## 
-##       Site1  Site2  Site3  Site4  Site5 
-## Site2 <2e-16   -      -      -      -     
-## Site3 <2e-16 <2e-16   -      -      -     
-## Site4 <2e-16 0.22   <2e-16   -      -     
-## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -     
-## Site6 <2e-16 <2e-16 <2e-16 <2e-16 <2e-16
+##        44.5N  45.5N  46.5N  47.5N  48.5N 
+## 45.5N <2e-16   -      -      -      -     
+## 46.5N <2e-16 <2e-16   -      -      -     
+## 47.5N <2e-16 0.22   <2e-16   -      -     
+## 48.5N <2e-16 <2e-16 <2e-16 <2e-16   -     
+## 49.5N <2e-16 <2e-16 <2e-16 <2e-16 <2e-16
 ## 
 ## P value adjustment method: bonferroni
 \end{verbatim}
@@ -360,7 +421,7 @@ Here, we present  the full results of the analysis of variance done on emergence
 
 \begin{verbatim}
 ##               Df Sum Sq Mean Sq F value Pr(>F)    
-## Site     5 155376   31075   727.7 <2e-16 ***
+## Latitude     5 155376   31075   727.7 <2e-16 ***
 ## Residuals   7194 307197      43                   
 ## 
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -370,12 +431,12 @@ Here, we present  the full results of the analysis of variance done on emergence
 ## 
 ##  Pairwise comparisons using t tests with pooled SD 
 ## 
-##       Site1  Site2  Site3  Site4  Site5
-## Site2 <2e-16   -      -      -      -    
-## Site3 <2e-16 <2e-16   -      -      -    
-## Site4 <2e-16 0.202  <2e-16   -      -    
-## Site5 <2e-16 <2e-16 <2e-16 <2e-16   -    
-## Site6 <2e-16 <2e-16 <2e-16 <2e-16 0.014
+##        44.5N  45.5N  46.5N  47.5N  48.5N
+## 45.5N <2e-16   -      -      -      -    
+## 46.5N <2e-16 <2e-16   -      -      -    
+## 47.5N <2e-16 0.202  <2e-16   -      -    
+## 48.5N <2e-16 <2e-16 <2e-16 <2e-16   -    
+## 49.5N <2e-16 <2e-16 <2e-16 <2e-16 0.014
 ## 
 ## P value adjustment method: bonferroni
 \end{verbatim}
@@ -384,7 +445,7 @@ Here, we present  the full results of the analysis of variance done on emergence
 
 \begin{verbatim}
 ##               Df Sum Sq Mean Sq F value Pr(>F)    
-## Site     5  58046   11609   690.5 <2e-16 ***
+## Latitude     5  58046   11609   690.5 <2e-16 ***
 ## Residuals   7194 120951      17                   
 ## 
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -394,12 +455,12 @@ Here, we present  the full results of the analysis of variance done on emergence
 ## 
 ##  Pairwise comparisons using t tests with pooled SD 
 ##  
-##       Site1   Site2   Site3   Site4   Site5  
-## Site2 < 2e-16   -       -       -       -      
-## Site3 8.2e-16 < 2e-16   -       -       -      
-## Site4 < 2e-16 0.0097  < 2e-16   -       -      
-## Site5 < 2e-16 < 2e-16 < 2e-16 < 2e-16   -      
-## Site6 < 2e-16 < 2e-16 < 2e-16 < 2e-16 < 2e-16
+##        44.5N  45.5N  46.5N  47.5N  48.5N
+## 45.5N < 2e-16   -       -       -       -      
+## 46.5N 8.2e-16 < 2e-16   -       -       -      
+## 47.5N < 2e-16 0.0097  < 2e-16   -       -      
+## 48.5N < 2e-16 < 2e-16 < 2e-16 < 2e-16   -      
+## 49.5N < 2e-16 < 2e-16 < 2e-16 < 2e-16 < 2e-16
 ## 
 ## P value adjustment method: bonferroni
 \end{verbatim}
@@ -408,7 +469,7 @@ Here, we present  the full results of the analysis of variance done on emergence
 
 \begin{verbatim}
 ##               Df Sum Sq Mean Sq F value Pr(>F)    
-## Site     5  25363    5073   572.3 <2e-16 ***
+## Latitude     5  25363    5073   572.3 <2e-16 ***
 ## Residuals   7194  63763       9                   
 ## 
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -418,14 +479,15 @@ Here, we present  the full results of the analysis of variance done on emergence
 ## 
 ##  Pairwise comparisons using t tests with pooled SD 
 ## 
-##       Site1   Site2   Site3   Site4   Site5  
-## Site2 < 2e-16   -       -       -       -      
-## Site3 < 2e-16 < 2e-16   -       -       -      
-## Site4 < 2e-16 1       < 2e-16   -       -      
-## Site5 < 2e-16 < 2e-16 < 2e-16 < 2e-16   -      
-## Site6 < 2e-16 < 2e-16 < 2e-16 < 2e-16 1.1e-11
+##        44.5N  45.5N  46.5N  47.5N  48.5N  
+## 45.5N < 2e-16   -       -       -       -      
+## 46.5N < 2e-16 < 2e-16   -       -       -      
+## 47.5N < 2e-16 1       < 2e-16   -       -      
+## 48.5N < 2e-16 < 2e-16 < 2e-16 < 2e-16   -      
+## 49.5N < 2e-16 < 2e-16 < 2e-16 < 2e-16 1.1e-11
 ## 
 ## P value adjustment method: bonferroni
 \end{verbatim}
 
+\bibliography{Supplements}
 \end{document}

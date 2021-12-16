@@ -1415,3 +1415,237 @@ png('Graphabstract2.png', width = 900, height = 600)
 print(p1)
 dev.off()
 
+
+#### fitting goodness of fit ####
+library(lattice)
+library(latticeExtra)
+
+setwd("C:/Users/sebca/Documents/Master_Uottawa/SBW_models/Fitting")
+dat=read.csv('Budburst_Prov_Error.csv')
+
+errsq = dat$Error^2
+sumsq = sum(errsq)
+rmsesq = sumsq/nrow(dat)
+rmse = sqrt(rmsesq)
+
+dat = dat[dat$Budburst>100,]
+
+mypanel1 = function(x,y,...){
+  panel.xyplot(x,y,...)
+  panel.abline(a = 0, b = 1, lwd =2.5)
+  panel.text(108,104,'A',cex=2)
+}
+oplot = xyplot(Budburst~Predicted,data = dat,col='black',pch=20,
+               xlim=c(100,181),ylim=c(100,181),
+               xlab='Predicted budburst',ylab='Observed budburst',
+               panel = mypanel1,
+               par.settings=list(axis.text=list(cex=1.5),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                 axis.components=list(top=list(tck=0),right=list(tck=0))),
+               scales=list(x=list(at=c(100,120,140,160,180),labels=c(100,120,140,160,180)),
+                           y=list(at=c(100,120,140,160,180),labels=c(100,120,140,160,180)))
+               )
+
+dat=read.csv('Budburst_Prov_Error.csv')
+mod1 = lm((Predicted-Budburst)~Predicted, data = dat)
+summary(mod1)
+
+mypanel2 = function(x,...){
+  panel.histogram(x,...)
+  panel.text(-93,2,'B',cex=2)
+}
+histo = histogram(dat$Error,breaks=50,xlim=c(-100,100),col='grey',
+                  xlab='Residuals',ylab='Percentage from total',
+                  panel = mypanel2,
+                  par.settings=list(axis.text=list(cex=1.5),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                    axis.components=list(top=list(tck=0),right=list(tck=0)))
+                  )
+
+mypanel3 = function(x,y,...){
+  panel.xyplot(x,y,...)
+  panel.text(45.4,-90,'C',cex=2)
+}
+latiplot = xyplot(Error~Latitude,data = dat,ylim=c(-100,100),pch=20,col='black',
+                  xlab='Latitude',ylab='Residuals',
+                  panel = mypanel3,
+                  par.settings=list(axis.text=list(cex=1.5),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                    axis.components=list(top=list(tck=0),right=list(tck=0))),
+                  scales=list(x=list(at=c(46,47,48,49),labels=c('46°N','47°N','48°N','49°N')),
+                              y=list(at=c(-100,-50,0,50,100),labels=c(-100,-50,0,50,100)))
+                  )
+
+setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1/JAE_Paper/Paper/Supplements")
+cairo_pdf('Fitting_Plots.pdf',height = 12,width = 14)
+par(mar=c(5,5,4,1))
+print(oplot,split=c(1,1,2,2),more = T)
+print(histo,split=c(2,1,2,2),more = T)
+print(latiplot,split=c(1,2,2,2),more = F)
+dev.off()
+
+#### sensitivity ####
+library(lattice)
+library(latticeExtra)
+
+setwd('C:/Users/sebca/Documents/Master_Uottawa/SBW_models/Sensitivity')
+prccbudworm = read.csv('PRCC_Budworm_Model.csv')
+
+prcc = prccbudworm[,1]
+nam = c(expression(paste(beta[1])),expression(paste(beta[2])),expression(paste(beta[3])),expression(paste(beta[4])),
+        expression(paste('x'[b])),expression(paste('x'[m])))
+x0 = seq(1,6)
+y0 = rep(0,6)
+x1 = x0
+y1 = prcc
+
+prcctree = read.csv('PRCC_Uniforc_Model.csv')
+
+prcc2 = prcctree[,1]
+nam2 = c(expression(paste('b'[f])), expression(paste('c'[f])),expression(paste('F'*'*')),expression(paste('t'[1])))
+x02 = seq(1,4)
+y02 = rep(0,4)
+x12 = x02
+y12 = prcc2
+
+mypanel1 = function(x,y,...){
+  panel.xyplot(x,y,...)
+  panel.abline(h=0,lwd=1)
+  panel.segments(x0,y0,x1,y1,lwd=2)
+  panel.text(0.7,-0.9,'A',cex=1.5)
+}
+p1 = xyplot(0~0,type='n',xlim=c(0.5,6.5),ylim=c(-1,1),
+            xlab = 'Parameters',ylab = 'PRCC',
+            panel = mypanel1,
+            par.settings=list(axis.text=list(cex=1.5),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                              axis.components=list(top=list(tck=0),right=list(tck=0))),
+            scales=list(x=list(at=seq(1,6),labels=nam),
+                        y=list(at=c(-1.0,-0.5,0,0.5,1.0),labels=c(-1.0,-0.5,0,0.5,1.0)))
+            )
+
+mypanel2 = function(x,y,...){
+  panel.xyplot(x,y,...)
+  panel.abline(h=0,lwd=1)
+  panel.segments(x02,y02,x12,y12,lwd=2)
+  panel.text(0.6,-0.9,'B',cex=1.5)
+}
+p2 = xyplot(0~0,type='n',xlim=c(0.5,4.5),ylim=c(-1,1),
+            xlab = 'Parameters',ylab = 'PRCC',
+            panel = mypanel2,
+            par.settings=list(axis.text=list(cex=1.5),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                              axis.components=list(top=list(tck=0),right=list(tck=0))),
+            scales=list(x=list(at=seq(1,4),labels=nam2),
+                        y=list(at=c(-1.0,-0.5,0,0.5,1.0),labels=c(-1.0,-0.5,0,0.5,1.0)))
+            )
+
+setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1/JAE_Paper/Paper/Supplements")
+cairo_pdf('Sensitivity.pdf',height = 12, width = 9)
+print(p1,split = c(1,1,1,2),more=T)
+print(p2,split = c(1,2,1,2),more=F)
+dev.off()
+
+
+#### plots per decade ####
+library(lattice)
+library(latticeExtra)
+
+setwd("~/Master_Uottawa/SBW_models/BIOSim_Temperatures/Predictions")
+#past = read.csv('4_hourly_Past_Insect.csv',colClasses = c('Site'='factor'))
+
+rcp26 = read.csv('4_hourly_Predicted_RCP_26_Insect.csv',colClasses = c('Site'='factor'))
+rcp45 = read.csv('4_hourly_Predicted_RCP_45_Insect.csv',colClasses = c('Site'='factor'))
+rcp85 = read.csv('4_hourly_Predicted_RCP_85_Insect.csv',colClasses = c('Site'='factor'))
+model26 = rep('RCP26',nrow(rcp26))
+rcp26$Model = model26
+model45 = rep('RCP45',nrow(rcp45))
+rcp45$Model = model45
+model85 = rep('RCP85',nrow(rcp85))
+rcp85$Model = model85
+
+total = rbind(rcp26,rcp45,rcp85)
+rm(rcp26,rcp45,rcp85,model26,model45,model85)
+
+Decade = rep(0,nrow(total))
+for (i in 1:nrow(total)){
+  if (total$Year[i]<151){
+    Decade[i] = 'D1'
+  }
+  if (total$Year[i]>150 && total$Year<301){
+    Decade[i] = 'D2'
+  }
+  if (total$Year[i]>300 && total$Year<451){
+    Decade[i] = 'D3'
+  }
+  if (total$Year[i]>450 && total$Year<601){
+    Decade[i] = 'D4'
+  }
+  if (total$Year[i]>600 && total$Year<751){
+    Decade[i] = 'D5'
+  }
+  if (total$Year[i]>750 && total$Year<901){
+    Decade[i] = 'D6'
+  }
+  if (total$Year[i]>900 && total$Year<1051){
+    Decade[i] = 'D7'
+  }
+  if (total$Year[i]>1050 && total$Year<1201){
+    Decade[i] = 'D8'
+  }
+}
+
+total$Decade = Decade
+
+mycolors = c('pink','red','darkred')
+trellis.par.set(superpose.symbol = list(fill = mycolors,col=mycolors))
+b1 = bwplot(Emergence~Decade, data = total, groups = Model,
+       xlab = 'Decade',ylab = 'Emergence date (Julian days)',
+       pch = "|", box.width = 1/6,
+       panel = panel.superpose,
+       panel.groups = function(x, y,..., group.number){ 
+         panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+       par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                         axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                         box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                         superpose.symbol = list(fill = mycolors,col=mycolors)),
+       scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                          alternating=1))
+)
+
+mycolors = c('pink','red','darkred')
+trellis.par.set(superpose.symbol = list(fill = mycolors,col=mycolors))
+b2 = bwplot(Budburst~Decade, data = total, groups = Model,
+       xlab = 'Decade',ylab = 'Budburst date (Julian days)',
+       pch = "|", box.width = 1/6,
+       panel = panel.superpose,
+       panel.groups = function(x, y,..., group.number){ 
+         panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+       par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                         axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                         box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                         superpose.symbol = list(fill = mycolors,col=mycolors)),
+       scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                          alternating=1))
+)
+
+mycolors = c('pink','red','darkred')
+trellis.par.set(superpose.symbol = list(fill = mycolors,col=mycolors))
+b3 = bwplot(Mismatch~Decade, data = total, groups = Model,
+       xlab = 'Decade',ylab = 'Mismatch (Julian days)',
+       pch = "|", box.width = 1/6,
+       panel = panel.superpose,
+       panel.groups = function(x, y,..., group.number){ 
+         panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+       par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                         axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                         box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                         superpose.symbol = list(fill = mycolors,col=mycolors)),
+       scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                          alternating=1))
+)
+
+
+setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1/JAE_Paper/Paper/Supplements")
+pdf('Trends_Per_Decade.pdf',height = 14, width = 16)
+print(b1,split=c(1,1,2,2),more=T)
+print(b2,split=c(2,1,2,2),more=T)
+print(b3,split=c(1,2,2,2),more=F)
+dev.off()
+
+

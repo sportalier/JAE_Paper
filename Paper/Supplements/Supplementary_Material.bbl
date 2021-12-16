@@ -1,0 +1,20 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Dorais \& Kettela(1982)}]{Dorais1982}
+Dorais, L. \& Kettela, E.G. (1982) {A review of entomological survey and
+  assessment techniques used in regional spruce budworm}. \emph{Choristoneura
+  fumiferana} .
+
+\bibitem[{Pi{\~{n}}eiro \emph{et~al.}(2008)Pi{\~{n}}eiro, Perelman, Guerschman
+  \& Paruelo}]{Pineiro2008}
+Pi{\~{n}}eiro, G., Perelman, S., Guerschman, J.P. \& Paruelo, J.M. (2008) {How
+  to evaluate models: Observed vs. predicted or predicted vs. observed?}
+  \emph{Ecological Modelling} \textbf{216}, 316--322.
+
+\bibitem[{Wu \emph{et~al.}(2013)Wu, Dhingra, Gambhir \& Remais}]{Wu2013}
+Wu, J., Dhingra, R., Gambhir, M. \& Remais, J.V. (2013) {Sensitivity analysis
+  of infectious disease models: methods, advances and their application}.
+  \emph{Journal of The Royal Society Interface} \textbf{10}, 20121018.
+
+\end{thebibliography}

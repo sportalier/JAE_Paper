@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2021.2.5)  9 SEP 2021 02:48
+This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2021.2.5)  15 DEC 2021 18:37
  restricted system commands enabled.
 **Supplementary_Material.tex
 (./Supplementary_Material.tex
@@ -529,65 +529,71 @@ Package babel Info: \l@australian = using hyphenrules for ukenglish
 (babel)             (\language74) on input line 105.
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 (babel)             (\language74) on input line 108.
-))
+)) (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip61
+\bibsep=\skip62
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count198
+)
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
 tex.def
 File: l3backend-luatex.def 2020-09-01 L3 backend support: PDF output (LuaTeX)
-\l__kernel_color_stack_int=\count198
+\l__kernel_color_stack_int=\count199
 \l__pdf_internal_box=\box47
 ) (./Supplementary_Material.aux)
 \openout1 = Supplementary_Material.aux
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 26.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 29.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 
-26.
+29.
 
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 26
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 29
 .
 
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 29.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 2
-6.
+9.
 
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 29.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 
-26.
+29.
 
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 29.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line
- 26.
+ 29.
 
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    ... okay on input line 29.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -623,22 +629,22 @@ LaTeX Font Info:    ... okay on input line 26.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count199
-\c@mv@boldtabular=\count266
+\c@mv@tabular=\count266
+\c@mv@boldtabular=\count267
 
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count267
+\scratchcounter=\count268
 \scratchdimen=\dimen163
 \scratchbox=\box48
-\nofMPsegments=\count268
-\nofMParguments=\count269
+\nofMPsegments=\count269
+\nofMParguments=\count270
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count270
+\MPscratchCnt=\count271
 \MPscratchDim=\dimen164
-\MPnumerator=\count271
-\makeMPintoPDFobject=\count272
+\MPnumerator=\count272
+\makeMPintoPDFobject=\count273
 \everyMPtoPDFconversion=\toks28
 )
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
@@ -683,311 +689,137 @@ Package grfext Info: Graphics extension search list:
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 17.28pt on input line 27.
+(Font)              scaled to size 17.28pt on input line 30.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 17.28pt on input line 29.
+(Font)              scaled to size 17.28pt on input line 32.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 32.
+(Font)              scaled to size 14.4pt on input line 35.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 33.
+(Font)              scaled to size 14.4pt on input line 36.
 LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input line
- 35.
+ 38.
 
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2015/01/17 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 35.
+(Font)              scaled to size 14.4pt on input line 38.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.5pt on input line 35.
+(Font)              scaled to size 10.5pt on input line 38.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.9pt on input line 35.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
+(Font)              scaled to size 7.9pt on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
 
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
 
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 3
-5.
+8.
 
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 3
-5.
+8.
 
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 3
-5.
+8.
 
 (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 37.
+(Font)              scaled to size 12.0pt on input line 40.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 37.
+(Font)              scaled to size 8.8pt on input line 40.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 37.
+(Font)              scaled to size 6.6pt on input line 40.
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--40
+Underfull \hbox (badness 10000) in paragraph at lines 36--43
 
  []
 
-<JAE_Logo.png, id=1, 627.84563pt x 103.13531pt>
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 54.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
 [1
 
-{C:/Users/sebca/AppData/Local/MiKTeX/pdftex/config/pdftex.map}<./JAE_Logo.png>]
+{C:/Users/sebca/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 61.
+(Font)              scaled to size 8.8pt on input line 64.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 61.
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 72.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[2]
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 92.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[3]
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 107.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
+(Font)              scaled to size 6.6pt on input line 64.
+ [2] [3]
 [4]
 Missing character: There is no ’ (U+2019) in font ntx-Regular-tlf-ot1!
 Missing character: There is no ’ (U+2019) in font ntx-Regular-tlf-ot1!
 Missing character: There is no ’ (U+2019) in font ntx-Regular-tlf-ot1!
 Missing character: There is no ’ (U+2019) in font ntx-Regular-tlf-ot1!
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 125.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[5]
-<FigureS1.pdf, id=26, 867.24pt x 505.89pt>
+ [5]
+<FigureS1.pdf, id=25, 867.24pt x 505.89pt>
 File: FigureS1.pdf Graphic file (type pdf)
 <use FigureS1.pdf>
-Package luatex.def Info: FigureS1.pdf  used on input line 131.
+Package luatex.def Info: FigureS1.pdf  used on input line 142.
 (luatex.def)             Requested size: 455.24408pt x 265.55762pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 132.
-LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 1
-41.
- (C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/t1ntxtt.fd
+(Font)              scaled to size 12.0pt on input line 143.
+ [6<./FigureS1.pdf>]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 12.0pt on input line 150.
+ [7
+
+]
+<map_fitting.png, id=39, 433.62pt x 433.62pt>
+File: map_fitting.png Graphic file (type png)
+<use map_fitting.png>
+Package luatex.def Info: map_fitting.png  used on input line 172.
+(luatex.def)             Requested size: 455.24408pt x 455.26813pt.
+<Fitting_Plots.pdf, id=40, 1011.78pt x 867.24pt>
+File: Fitting_Plots.pdf Graphic file (type pdf)
+<use Fitting_Plots.pdf>
+Package luatex.def Info: Fitting_Plots.pdf  used on input line 181.
+(luatex.def)             Requested size: 455.24408pt x 390.2147pt.
+<Sensitivity.pdf, id=41, 650.43pt x 867.24pt>
+File: Sensitivity.pdf Graphic file (type pdf)
+<use Sensitivity.pdf>
+Package luatex.def Info: Sensitivity.pdf  used on input line 190.
+(luatex.def)             Requested size: 398.33858pt x 531.13292pt.
+
+
+LaTeX Warning: Float too large for page by 4.99478pt on input line 193.
+
+[8] [9<./map_fitting.png>] [10<./Fitting_Plots.pdf>] [11<./Sensitivity.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 2
+02.
+
+(C:/Users/sebca/AppData/Local/Programs/MiKTeX/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 141.
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 147.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
+(Font)              scaled to size 12.0pt on input line 202.
 
+[12
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[6
-
-<./FigureS1.pdf>]
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 171.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[7]
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 209.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[8]
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 234.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[9]
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 258.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[10]
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 293.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[11]
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 317.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[12]
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 355.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[13]
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 381.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[14]
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 405.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[15]
-File: JAE_Logo.png Graphic file (type png)
-<use JAE_Logo.png>
-Package luatex.def Info: JAE_Logo.png  used on input line 431.
-(luatex.def)             Requested size: 173.20894pt x 28.45274pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 32.80278pt, for example:
-(fancyhdr)                \setlength{\headheight}{32.80278pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-20.80278pt}.
-
-[16] (./Supplementary_Material.aux))
+] [13] [14] [15] [16] [17] [18] [19] [20] [21] (./Supplementary_Material.bbl) [
+22] (./Supplementary_Material.aux))
 
 Here is how much of LuaTeX's memory you used:
- 9441 strings out of 481289
+ 9724 strings out of 481289
  125171,460012 words of node,token memory allocated
- 1407 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 87 kern, 1 glyph, 173 attribute, 53 
-glue_spec, 88 attribute_list, 1 write nodes
-   avail lists: 1:1,2:228,3:311,4:16,5:247,6:30,7:1931,8:56,9:202,10:9,11:106
- 26039 multiletter control sequences out of 65536+200000
- 166 fonts using 12883859 bytes
- 55i,15n,97p,833b,522s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf.
-enc}{C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-t
+ 1727 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 131 kern, 1 glyph, 203 attribute, 55
+ glue_spec, 103 attribute_list, 1 write nodes
+   avail lists: 1:4,2:329,3:290,4:16,5:192,6:29,7:2816,8:56,9:190,10:10,11:213
+ 26388 multiletter control sequences out of 65536+200000
+ 167 fonts using 12966483 bytes
+ 55i,11n,97p,833b,440s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.e
+nc}{C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-t
 lf.enc}<C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/Ne
 wTXMI.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx
 /NewTXMI7.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/public/t
@@ -996,10 +828,11 @@ c/newtx/txexs.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/newtx/txmiaX.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/newtx/txsys.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/newtx/ztmb.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/newtx/ztmr.pfb>
-Output written on Supplementary_Material.pdf (16 pages, 274673 bytes).
+ublic/newtx/ztmr.pfb><C:/Users/sebca/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/newtx/ztmri.pfb>
+Output written on Supplementary_Material.pdf (22 pages, 347863 bytes).
 
-PDF statistics: 97 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 141 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 
