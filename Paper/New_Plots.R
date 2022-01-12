@@ -1592,13 +1592,31 @@ for (i in 1:nrow(total)){
 
 total$Decade = Decade
 
+total1 = subset(total,total$Site=='Site1')
+total1 = droplevels(total1)
+total2 = subset(total,total$Site=='Site2')
+total2 = droplevels(total2)
+total3 = subset(total,total$Site=='Site3')
+total3 = droplevels(total3)
+total4 = subset(total,total$Site=='Site4')
+total4 = droplevels(total4)
+total5 = subset(total,total$Site=='Site5')
+total5 = droplevels(total5)
+total6 = subset(total,total$Site=='Site6')
+total6 = droplevels(total6)
+
 mycolors = c('pink','red','darkred')
 trellis.par.set(superpose.symbol = list(fill = mycolors,col=mycolors))
-b1 = bwplot(Emergence~Decade, data = total, groups = Model,
+
+mypanel1 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,138,'44.5°N',cex=2)
+}
+emer1 = bwplot(Emergence~Decade, data = total1, groups = Model,
        xlab = 'Decade',ylab = 'Emergence date (Julian days)',
        pch = "|", box.width = 1/6,
-       panel = panel.superpose,
-       panel.groups = function(x, y,..., group.number){ 
+       panel = mypanel1,
+       panel.groups = function(x, y,..., group.number){
          panel.bwplot(x + (group.number-1.5)/6, y ,...)},
        par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
                          axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
@@ -1606,46 +1624,402 @@ b1 = bwplot(Emergence~Decade, data = total, groups = Model,
                          superpose.symbol = list(fill = mycolors,col=mycolors)),
        scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
                           alternating=1))
+      )
+
+mypanel2 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,147,'45.5°N',cex=2)
+}
+emer2 = bwplot(Emergence~Decade, data = total2, groups = Model,
+               xlab = 'Decade',ylab = 'Emergence date (Julian days)',
+               pch = "|", box.width = 1/6,
+               panel = mypanel2,
+               panel.groups = function(x, y,..., group.number){
+                 panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+               par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                 axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                 box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                 superpose.symbol = list(fill = mycolors,col=mycolors)),
+               scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                  alternating=1))
 )
 
-mycolors = c('pink','red','darkred')
-trellis.par.set(superpose.symbol = list(fill = mycolors,col=mycolors))
-b2 = bwplot(Budburst~Decade, data = total, groups = Model,
-       xlab = 'Decade',ylab = 'Budburst date (Julian days)',
-       pch = "|", box.width = 1/6,
-       panel = panel.superpose,
-       panel.groups = function(x, y,..., group.number){ 
-         panel.bwplot(x + (group.number-1.5)/6, y ,...)},
-       par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
-                         axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
-                         box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
-                         superpose.symbol = list(fill = mycolors,col=mycolors)),
-       scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
-                          alternating=1))
+mypanel3 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,141,'46.5°N',cex=2)
+}
+emer3 = bwplot(Emergence~Decade, data = total3, groups = Model,
+               xlab = 'Decade',ylab = 'Emergence date (Julian days)',
+               pch = "|", box.width = 1/6,
+               panel = mypanel3,
+               panel.groups = function(x, y,..., group.number){
+                 panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+               par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                 axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                 box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                 superpose.symbol = list(fill = mycolors,col=mycolors)),
+               scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                  alternating=1))
 )
 
-mycolors = c('pink','red','darkred')
-trellis.par.set(superpose.symbol = list(fill = mycolors,col=mycolors))
-b3 = bwplot(Mismatch~Decade, data = total, groups = Model,
-       xlab = 'Decade',ylab = 'Mismatch (Julian days)',
-       pch = "|", box.width = 1/6,
-       panel = panel.superpose,
-       panel.groups = function(x, y,..., group.number){ 
-         panel.bwplot(x + (group.number-1.5)/6, y ,...)},
-       par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
-                         axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
-                         box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
-                         superpose.symbol = list(fill = mycolors,col=mycolors)),
-       scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
-                          alternating=1))
+mypanel4 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,147,'47.5°N',cex=2)
+}
+emer4 = bwplot(Emergence~Decade, data = total4, groups = Model,
+               xlab = 'Decade',ylab = 'Emergence date (Julian days)',
+               pch = "|", box.width = 1/6,
+               panel = mypanel4,
+               panel.groups = function(x, y,..., group.number){
+                 panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+               par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                 axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                 box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                 superpose.symbol = list(fill = mycolors,col=mycolors)),
+               scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                  alternating=1))
 )
 
+mypanel5 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,151,'48.5°N',cex=2)
+}
+emer5 = bwplot(Emergence~Decade, data = total5, groups = Model,
+               xlab = 'Decade',ylab = 'Emergence date (Julian days)',
+               pch = "|", box.width = 1/6,
+               panel = mypanel5,
+               panel.groups = function(x, y,..., group.number){
+                 panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+               par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                 axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                 box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                 superpose.symbol = list(fill = mycolors,col=mycolors)),
+               scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                  alternating=1))
+)
 
-setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1/JAE_Paper/Paper/Supplements")
-pdf('Trends_Per_Decade.pdf',height = 14, width = 16)
-print(b1,split=c(1,1,2,2),more=T)
-print(b2,split=c(2,1,2,2),more=T)
-print(b3,split=c(1,2,2,2),more=F)
+mypanel6 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,151,'49.5°N',cex=2)
+}
+emer6 = bwplot(Emergence~Decade, data = total6, groups = Model,
+               xlab = 'Decade',ylab = 'Emergence date (Julian days)',
+               pch = "|", box.width = 1/6,
+               panel = mypanel6,
+               panel.groups = function(x, y,..., group.number){
+                 panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+               par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                 axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                 box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                 superpose.symbol = list(fill = mycolors,col=mycolors)),
+               scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                  alternating=1))
+)
+
+#setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1/JAE_Paper/Paper/Supplements")
+setwd("~/Budworm/Manuscript/JAE_Paper/Paper/Supplements")
+pdf('Emergence_Per_Decade.pdf',height = 18, width = 14)
+print(emer1,split=c(1,1,2,3),more=T)
+print(emer2,split=c(2,1,2,3),more=T)
+print(emer3,split=c(1,2,2,3),more=T)
+print(emer4,split=c(2,2,2,3),more=T)
+print(emer5,split=c(1,3,2,3),more=T)
+print(emer6,split=c(2,3,2,3),more=F)
 dev.off()
+
+mypanel1 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,143,'44.5°N',cex=2)
+}
+bud1 = bwplot(Budburst~Decade, data = total1, groups = Model,
+               xlab = 'Decade',ylab = 'Budburst date (Julian days)',
+               pch = "|", box.width = 1/6,
+               panel = mypanel1,
+               panel.groups = function(x, y,..., group.number){
+                 panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+               par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                 axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                 box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                 superpose.symbol = list(fill = mycolors,col=mycolors)),
+               scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                  alternating=1))
+)
+
+mypanel2 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,147,'45.5°N',cex=2)
+}
+bud2 = bwplot(Budburst~Decade, data = total2, groups = Model,
+               xlab = 'Decade',ylab = 'Budburst date (Julian days)',
+               pch = "|", box.width = 1/6,
+               panel = mypanel2,
+               panel.groups = function(x, y,..., group.number){
+                 panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+               par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                 axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                 box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                 superpose.symbol = list(fill = mycolors,col=mycolors)),
+               scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                  alternating=1))
+)
+
+mypanel3 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,144,'46.5°N',cex=2)
+}
+bud3 = bwplot(Budburst~Decade, data = total3, groups = Model,
+               xlab = 'Decade',ylab = 'Budburst date (Julian days)',
+               pch = "|", box.width = 1/6,
+               panel = mypanel3,
+               panel.groups = function(x, y,..., group.number){
+                 panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+               par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                 axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                 box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                 superpose.symbol = list(fill = mycolors,col=mycolors)),
+               scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                  alternating=1))
+)
+
+mypanel4 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,148,'47.5°N',cex=2)
+}
+bud4 = bwplot(Budburst~Decade, data = total4, groups = Model,
+               xlab = 'Decade',ylab = 'Budburst date (Julian days)',
+               pch = "|", box.width = 1/6,
+               panel = mypanel4,
+               panel.groups = function(x, y,..., group.number){
+                 panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+               par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                 axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                 box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                 superpose.symbol = list(fill = mycolors,col=mycolors)),
+               scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                  alternating=1))
+)
+
+mypanel5 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,149,'48.5°N',cex=2)
+}
+bud5 = bwplot(Budburst~Decade, data = total5, groups = Model,
+               xlab = 'Decade',ylab = 'Budburst date (Julian days)',
+               pch = "|", box.width = 1/6,
+               panel = mypanel5,
+               panel.groups = function(x, y,..., group.number){
+                 panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+               par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                 axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                 box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                 superpose.symbol = list(fill = mycolors,col=mycolors)),
+               scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                  alternating=1))
+)
+
+mypanel6 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,152,'49.5°N',cex=2)
+}
+bud6 = bwplot(Budburst~Decade, data = total6, groups = Model,
+               xlab = 'Decade',ylab = 'Budburst date (Julian days)',
+               pch = "|", box.width = 1/6,
+               panel = mypanel6,
+               panel.groups = function(x, y,..., group.number){
+                 panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+               par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                 axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                 box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                 superpose.symbol = list(fill = mycolors,col=mycolors)),
+               scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                  alternating=1))
+)
+
+#setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1/JAE_Paper/Paper/Supplements")
+setwd("~/Budworm/Manuscript/JAE_Paper/Paper/Supplements")
+pdf('Budburst_Per_Decade.pdf',height = 18, width = 14)
+print(bud1,split=c(1,1,2,3),more=T)
+print(bud2,split=c(2,1,2,3),more=T)
+print(bud3,split=c(1,2,2,3),more=T)
+print(bud4,split=c(2,2,2,3),more=T)
+print(bud5,split=c(1,3,2,3),more=T)
+print(bud6,split=c(2,3,2,3),more=F)
+dev.off()
+
+mypanel1 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,-3,'44.5°N',cex=2)
+}
+mis1 = bwplot(Mismatch~Decade, data = total1, groups = Model,
+              xlab = 'Decade',ylab = 'Mismatch (Julian days)',
+              pch = "|", box.width = 1/6,
+              panel = mypanel1,
+              panel.groups = function(x, y,..., group.number){
+                panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+              par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                superpose.symbol = list(fill = mycolors,col=mycolors)),
+              scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                 alternating=1))
+)
+
+mypanel2 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,-1,'45.5°N',cex=2)
+}
+mis2 = bwplot(Mismatch~Decade, data = total2, groups = Model,
+              xlab = 'Decade',ylab = 'Mismatch (Julian days)',
+              pch = "|", box.width = 1/6,
+              panel = mypanel2,
+              panel.groups = function(x, y,..., group.number){
+                panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+              par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                superpose.symbol = list(fill = mycolors,col=mycolors)),
+              scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                 alternating=1))
+)
+
+mypanel3 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,-3,'46.5°N',cex=2)
+}
+mis3 = bwplot(Mismatch~Decade, data = total3, groups = Model,
+              xlab = 'Decade',ylab = 'Mismatch (Julian days)',
+              pch = "|", box.width = 1/6,
+              panel = mypanel3,
+              panel.groups = function(x, y,..., group.number){
+                panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+              par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                superpose.symbol = list(fill = mycolors,col=mycolors)),
+              scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                 alternating=1))
+)
+
+mypanel4 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,-2,'47.5°N',cex=2)
+}
+mis4 = bwplot(Mismatch~Decade, data = total4, groups = Model,
+              xlab = 'Decade',ylab = 'Mismatch (Julian days)',
+              pch = "|", box.width = 1/6,
+              panel = mypanel4,
+              panel.groups = function(x, y,..., group.number){
+                panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+              par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                superpose.symbol = list(fill = mycolors,col=mycolors)),
+              scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                 alternating=1))
+)
+
+mypanel5 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,2,'48.5°N',cex=2)
+}
+mis5 = bwplot(Mismatch~Decade, data = total5, groups = Model,
+              xlab = 'Decade',ylab = 'Mismatch (Julian days)',
+              pch = "|", box.width = 1/6,
+              panel = mypanel5,
+              panel.groups = function(x, y,..., group.number){
+                panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+              par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                superpose.symbol = list(fill = mycolors,col=mycolors)),
+              scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                 alternating=1))
+)
+
+mypanel6 = function(x,y,...){
+  panel.superpose(x,y,...)
+  panel.text(7.5,-1,'49.5°N',cex=2)
+}
+mis6 = bwplot(Mismatch~Decade, data = total6, groups = Model,
+              xlab = 'Decade',ylab = 'Mismatch (Julian days)',
+              pch = "|", box.width = 1/6,
+              panel = mypanel6,
+              panel.groups = function(x, y,..., group.number){
+                panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+              par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+                                axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+                                box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+                                superpose.symbol = list(fill = mycolors,col=mycolors)),
+              scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+                                 alternating=1))
+)
+
+#setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1/JAE_Paper/Paper/Supplements")
+setwd("~/Budworm/Manuscript/JAE_Paper/Paper/Supplements")
+pdf('Mismatch_Per_Decade.pdf',height = 18, width = 14)
+print(mis1,split=c(1,1,2,3),more=T)
+print(mis2,split=c(2,1,2,3),more=T)
+print(mis3,split=c(1,2,2,3),more=T)
+print(mis4,split=c(2,2,2,3),more=T)
+print(mis5,split=c(1,3,2,3),more=T)
+print(mis6,split=c(2,3,2,3),more=F)
+dev.off()
+
+
+# mycolors = c('pink','red','darkred')
+# trellis.par.set(superpose.symbol = list(fill = mycolors,col=mycolors))
+# b1 = bwplot(Emergence~Decade, data = total, groups = Model,
+#        xlab = 'Decade',ylab = 'Emergence date (Julian days)',
+#        pch = "|", box.width = 1/6,
+#        panel = panel.superpose,
+#        panel.groups = function(x, y,..., group.number){ 
+#          panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+#        par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+#                          axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+#                          box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+#                          superpose.symbol = list(fill = mycolors,col=mycolors)),
+#        scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+#                           alternating=1))
+# )
+# 
+# mycolors = c('pink','red','darkred')
+# trellis.par.set(superpose.symbol = list(fill = mycolors,col=mycolors))
+# b2 = bwplot(Budburst~Decade, data = total, groups = Model,
+#        xlab = 'Decade',ylab = 'Budburst date (Julian days)',
+#        pch = "|", box.width = 1/6,
+#        panel = panel.superpose,
+#        panel.groups = function(x, y,..., group.number){ 
+#          panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+#        par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+#                          axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+#                          box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+#                          superpose.symbol = list(fill = mycolors,col=mycolors)),
+#        scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+#                           alternating=1))
+# )
+# 
+# mycolors = c('pink','red','darkred')
+# trellis.par.set(superpose.symbol = list(fill = mycolors,col=mycolors))
+# b3 = bwplot(Mismatch~Decade, data = total, groups = Model,
+#        xlab = 'Decade',ylab = 'Mismatch (Julian days)',
+#        pch = "|", box.width = 1/6,
+#        panel = panel.superpose,
+#        panel.groups = function(x, y,..., group.number){ 
+#          panel.bwplot(x + (group.number-1.5)/6, y ,...)},
+#        par.settings=list(axis.text=list(cex=1.3),par.xlab.text=list(cex=2.5),par.ylab.text=list(cex=2.5),
+#                          axis.components=list(top=list(tck=0),right=list(tck=0)),plot.symbol=list(col='black',pch=1),
+#                          box.umbrella=list(lty=1,col='black',lwd=2),box.rectangle=list(col='black',lwd=2),
+#                          superpose.symbol = list(fill = mycolors,col=mycolors)),
+#        scales=list(x=list(at=c(1.1,2.1,3.1,4.1,5.1,6.1,7.1,8.1),labels=c('20/30','30/40','40/50','50/60','60/70','70/80','80/90','90/100'),
+#                           alternating=1))
+# )
+# 
+# 
+# setwd("~/Master_Uottawa/SBW_models/Manuscripts/Paper_1/JAE_Paper/Paper/Supplements")
+# pdf('Trends_Per_Decade.pdf',height = 14, width = 16)
+# print(b1,split=c(1,1,2,2),more=T)
+# print(b2,split=c(2,1,2,2),more=T)
+# print(b3,split=c(1,2,2,2),more=F)
+# dev.off()
 
 
